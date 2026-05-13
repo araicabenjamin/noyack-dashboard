@@ -4,7 +4,7 @@ export function InsightsCard() {
   return (
     <div className="card insights-card">
       <div className="insights-header">
-        <h3 className="card-title">Insights for you</h3>
+        <h3 className="card-title">Insightsgit push for you</h3>
         <span className="status">On Track</span>
       </div>
 
