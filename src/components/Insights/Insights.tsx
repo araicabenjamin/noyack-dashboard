@@ -1,4 +1,4 @@
-import "./Insights.css";
+import "./Temp.css";
 
 export function InsightsCard() {
   return (
