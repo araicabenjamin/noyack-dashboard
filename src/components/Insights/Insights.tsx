@@ -1,4 +1,4 @@
-import "./Insights.css";import "./Insights.css";
+import "./Insights.css";
 
 export function InsightsCard() {
   return (
