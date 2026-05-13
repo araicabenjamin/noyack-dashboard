@@ -1,0 +1,81 @@
+
+
+/* Override card padding like QuickActions */
+.recent-activity-card {
+  padding: 20px 0;
+}
+
+/* Title alignment */
+.recent-activity-card .card-title {
+  padding: 0 20px 0px;
+  margin-bottom: 0px;
+}
+
+/* List */
+.activity-list {
+  width: 100%;
+}
+
+/* Row */
+.activity-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Remove last divider */
+.activity-row:last-child {
+  border-bottom: none;
+}
+
+/* Left side */
+.activity-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Icon */
+.icon-box {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Text */
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.description {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 2px 0 0;
+}
+
+/* Right side */
+.activity-right {
+  text-align: right;
+}
+
+.amount {
+  font-weight: 600;
+  margin: 0;
+}
+
+.date {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}

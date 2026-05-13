@@ -1,0 +1,71 @@
+/* INSIGHTS CARD*/
+.insights-card {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+  
+  padding: 20px;
+  background-color: #F5F9FA;
+}
+
+
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.status {
+  font-size: 14px;
+  color: #01abad;
+  font-weight: 500;
+}
+
+.insights-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* BUTTON */
+.insight-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  border: 1px solid #01abad;
+  background: transparent;
+  color: #01abad;
+
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.insight-button:hover {
+  background: rgba(1, 171, 173, 0.08);
+}
+
+
+
+/* ILLUSTRATION  */
+.insights-illustration img {
+  width: 150px;
+  height: auto;
+  
+
+}
+
+
+/* LEFT CONTENT */
+.insights-left {
+  max-width: 60%;
+}
+
+.insight-text {
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-border: #E5E7EB;
+
+  --color-primary: #0067A7;
+  --color-tertiary: #01ABAD;
+  --color-purple: #7C3AED;
+  --color-orange: #F59E0B;
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+
+  --radius-md: 12px;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}

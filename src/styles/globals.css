@@ -1,0 +1,453 @@
+/* ROOT */
+body {
+  font-family: 'Jeko', sans-serif;
+  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Jeko';
+  src: url('/fonts/Jeko-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Jeko';
+  src: url('/fonts/Jeko-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Jeko';
+  src: url('/fonts/Jeko-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Jeko';
+  src: url('/fonts/Jeko-SemiBold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Jeko';
+  src: url('/fonts/Jeko-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Jeko';
+  src: url('/fonts/Jeko-Black.otf') format('opentype');
+  font-weight: 800;
+}
+
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100dvh;
+}
+
+
+
+/* MAIN AREA */
+.app-main {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 10px 25px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent; /* 👈 THIS is critical */
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+
+}
+
+.search-input:focus {
+  border-color: #0ea5e9;
+}
+
+.search-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.search-divider {
+  width: 1px;
+  height: 18px;
+  background: #e5e7eb;
+}
+
+
+/* CONTENT */
+.content {
+  padding: 9px 24px 24px 24px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: stretch; /* IMPORTANT */
+}
+
+
+/* GRID */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+
+/* CARD BASE */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+
+/* CARDS */
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+}
+
+.card-value {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.card-change {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.card-change.positive {
+  color: #10b981;
+}
+
+.card-change.negative {
+  color: #ef4444;
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.left-column {
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.right-column {
+  grid-column: 3 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+
+/* NET WORTH VARIANT */
+.networth-card {
+  background: linear-gradient(135deg, #0067A7, #69C8C9);
+  color: white;
+  border: none;
+}
+
+.networth-card .card-title {
+  color: rgb(255, 255, 255);
+}
+
+.networth-card .card-value {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.networth-card .card-change {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* SURFACE COLOR */
+body {
+  background-color: #F9F9FA;
+}
+
+
+
+/* ICON WRAPPER */
+.icon-wrapper {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.DollarSignIcon {
+  color-scheme: linear-gradient(135deg, #0067A7, #69C8C9);
+ 
+}
+
+
+
+.dashboard-header {
+  margin-bottom: 25px;
+}
+
+
+
+/* GREETING */
+.greeting {
+  font-size: 24px;
+  font-weight: 500;
+  color: #111827; /* strong but not pure black */
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.subtext {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.gradient-text {
+  display: inline-block;
+
+  background: linear-gradient(90deg, #0067A7, #69C8C9);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent; /* 🔥 THIS is what you're missing */
+  color: transparent; /* fallback */
+}
+
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* BELL BUTTON */
+.bell-button {
+  width: 62px;
+  height: 62px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+.bell-button svg {
+  color: #0067A7;
+  width: 25px;
+  height: 25px;
+}
+
+
+
+/* USER PROFILE CONTAINER */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 6px 25px 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.user-role {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+
+/* HOVER */
+.bell-button:hover {
+  background: #f3f4f6;
+}
+
+/* SIDEBAR*/
+.sidebar {
+  background: white;
+  
+  
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 34px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 24px; /* items spacing */
+}
+
+.sidebar-item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #6B7280; 
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+
+.logo img {
+  width: 140px;   /* 👈 adjust this until it feels right */
+  height: auto;
+  display: block;
+  
+}
+
+.logo {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* QUICK ACTIONS */
+
+.quick-actions-card {
+  grid-column: 3 / span 2;
+  grid-row: 3;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.actions button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* RECENT ACTIVITY */
+.recent-activity-card {
+  grid-column: span 2;
+}
+
+.activity-list {
+  margin-top: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.activity-list li {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
