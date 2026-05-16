@@ -1,4 +1,7 @@
 import { PieChart } from "lucide-react";
+import { getNetWorth } from "../data/financialCalculations";
+
+const netWorth = getNetWorth();
 
 export const NetWorthCard = () => {
   return (
@@ -9,9 +12,7 @@ export const NetWorthCard = () => {
         </div>
         <h3 className="card-title">Net Worth</h3>
       </div>
-
-      <div className="card-value">$50,040</div>
-
+      <div className="card-value">${netWorth.toLocaleString()}</div>
       <div className="card-change positive">↑ 12% vs last year</div>
     </div>
   );
