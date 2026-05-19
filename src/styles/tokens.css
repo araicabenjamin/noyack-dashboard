@@ -1,19 +1,264 @@
 :root {
-  --color-bg: #F8FAFC;
-  --color-surface: #FFFFFF;
-  --color-border: #E5E7EB;
-
-  --color-primary: #0067A7;
-  --color-tertiary: #01ABAD;
-  --color-purple: #7C3AED;
-  --color-orange: #F59E0B;
+  /* =========================
+     TEXT
+  ========================= */
 
   --color-text-primary: #111827;
+
   --color-text-secondary: #6B7280;
+
+  --color-text-muted: #6B7280;
+
+  --color-text-inverse: #FFFFFF;
+
+  /* =========================
+     BACKGROUNDS / SURFACES
+  ========================= */
+
+  --color-bg: #F8FAFC;
+
+  --color-surface-primary: #FFFFFF;
+
+  --color-surface-secondary: #F9FAFB;
+
+  --color-surface-blue: #F0F4FD;
+
+  --color-surface-teal: rgba(1, 171, 173, 0.15);
+
+   --color-tab-active: #F2F5FD;
+
+  /* =========================
+     BORDERS
+  ========================= */
+
+  --color-border-primary: #E5E7EB;
+
+  --color-border-secondary: #F0F4FD;
+
+  --color-border-interactive: #0067A7;
+
+  /* =========================
+     BRAND
+  ========================= */
+
+  --color-primary: #0067A7;
+
+  --color-teal: #01ABAD;
+
+  /* =========================
+     ACCENTS
+  ========================= */
+
+  --color-purple: #7C3AED;
+
+  --color-orange: #F59E0B;
+
+  /* =========================
+     STATUS
+  ========================= */
+
+  --color-success: #16A34A;
+
+  --color-warning: #D97706;
+
+  --color-danger: #DC2626;
+
+  /* =========================
+     RADIUS
+  ========================= */
+
+  --radius-sm: 8px;
 
   --radius-md: 12px;
 
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
+  --radius-lg: 16px;
+
+  --radius-xl: 20px;
+
+  /* =========================
+     SPACING
+  ========================= */
+
+  --space-2: 2px;
+
+  --space-4: 4px;
+
+  --space-6: 6px;
+
+  --space-8: 8px;
+
+  --space-10: 10px;
+
+  --space-12: 12px;
+
+  --space-14: 14px;
+
+  --space-16: 16px;
+
+  --space-18: 18px;
+
+  --space-20: 20px;
+
+  --space-24: 24px;
+
+  --space-28: 28px;
+
+  --space-32: 32px;
+
+  --space-36: 36px;
+
+  --space-40: 40px;
+}
+
+/* =========================
+   TYPOGRAPHY SYSTEM
+========================= */
+
+/* PAGE HEADINGS */
+
+.page-bold {
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.page-semibold {
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+/* CARD HEADINGS */
+
+.card-bold {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-text-primary)
+}
+
+.card-semibold {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-text-primary)
+}
+
+/* PRIMARY TEXT */
+
+.primary-regular {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--color-text-primary)
+}
+
+.primary-medium {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--color-text-primary)
+}
+
+.primary-semibold {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-text-primary)
+}
+
+/* BODY */
+
+.body-regular {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--color-text-primary)
+}
+
+.body-medium {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--color-text-primary)
+}
+
+.body-semibold {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-text-primary)
+}
+
+/* HELPERS */
+
+.helper-regular {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.helper-medium {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.helper-semibold {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  --color-text-muted: #9CA3AF;
+}
+
+/* META */
+
+.meta-regular {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* BUTTONS */
+
+.button-medium {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* BADGES */
+
+.badge-medium {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* VALUES */
+
+.value-xl {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.value-lg {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.emphasis-semibold {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.emphasis-bold {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
 }

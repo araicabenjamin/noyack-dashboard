@@ -25,9 +25,7 @@
 
   --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.06);
 
-  --transition-default:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  --transition-default: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* =========================
@@ -83,6 +81,13 @@
 body {
   font-family: "Jeko", sans-serif;
   background-color: var(--bg);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 h1,
@@ -259,6 +264,11 @@ p {
   box-shadow: var(--shadow-hover);
 }
 
+.card-header svg {
+  position: relative;
+  top: 3px;
+}
+
 .card-header {
   display: flex;
   align-items: center;
@@ -291,11 +301,6 @@ p {
 
 .card-change.negative {
   color: var(--negative);
-}
-
-.card-icon {
-  width: 20px;
-  height: 20px;
 }
 
 /* =========================
@@ -342,21 +347,6 @@ p {
 /* =========================
    ICON WRAPPER
 ========================= */
-
-.icon-wrapper {
-  width: 36px;
-  height: 36px;
-
-  border-radius: 10px;
-
-  background: var(--surface);
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* =========================
    USER PROFILE
@@ -425,58 +415,6 @@ p {
 .user-role {
   font-size: 12px;
   color: var(--muted);
-}
-
-/* =========================
-   SIDEBAR
-========================= */
-
-.sidebar {
-  background: var(--surface);
-}
-
-.logo {
-  margin-top: 32px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo img {
-  width: 140px;
-  height: auto;
-
-  display: block;
-}
-
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  margin-top: 60px;
-}
-
-.sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 10px 34px;
-}
-
-.sidebar-item svg {
-  width: 20px;
-  height: 20px;
-
-  flex-shrink: 0;
-
-  color: var(--muted);
-
-  opacity: 0.8;
-
-  transform: translateY(-1px);
 }
 
 /* =========================

@@ -1,0 +1,216 @@
+import "./Tools.css";
+import { Banknote, CreditCard, House } from "lucide-react";
+
+export const Tools = () => {
+  return (
+    <div className="tools-page">
+      <div className="tools-header">
+        <h1 className="page-semibold">Financial Planning</h1>
+
+        <p className="helper-regular">
+          Model scenarios and make smarter financial decisions.
+        </p>
+      </div>
+
+      <div className="tool-tabs">
+        <button className="tool-tab primary-medium active">
+          <House className="card-icon" size={20} color="#0067A7" />
+          Rent vs Buy
+        </button>
+
+        <button className="tool-tab primary-medium">
+          <House className="card-icon" size={20} color="#111827" />
+          Retirement
+        </button>
+
+        <button className="tool-tab primary-medium">
+          <CreditCard className="card-icon" size={20} color="#111827" />
+          Debt Payoff
+        </button>
+
+        <button className="tool-tab primary-medium">
+          <Banknote className="card-icon" size={20} color="#111827" />
+          Tax Optimization
+        </button>
+      </div>
+
+      <div className="tools-grid">
+        <div className="tools-panel">
+          <div className="panel-header">
+            <h2 className="card-bold">Your Inputs</h2>
+
+            <p className="helper-regular">
+              Adjust the values below to model different scenarios.
+            </p>
+          </div>
+
+          <div className="input-section">
+            <div className="body-semibold">Your Finances</div>
+
+            <div className="input-group">
+              <label className="body-regular">Annual Income</label>
+
+              <input
+                className="primary-regular"
+                type="text"
+                placeholder="$100,000"
+              />
+            </div>
+
+            <div className="input-group">
+              <label className="body-regular">Monthly Budget</label>
+
+              <input
+                className="primary-regular"
+                type="text"
+                placeholder="$2,500"
+              />
+            </div>
+
+            <div className="input-group">
+              <label className="body-regular">Target Home Price</label>
+
+              <input
+                className="primary-regular"
+                type="text"
+                placeholder="$450,000"
+              />
+            </div>
+          </div>
+
+          <div className="input-section">
+            <div className="body-semibold">Assumptions</div>
+
+            <div className="input-group">
+              <label className="primary-medium">Down Payment</label>
+
+              <input
+                className="primary-regular"
+                type="text"
+                placeholder="20%"
+              />
+            </div>
+
+            <div className="input-group">
+              <label className="primary-medium">Interest Rate</label>
+
+              <input
+                className="primary-regular"
+                type="text"
+                placeholder="6.5%"
+              />
+            </div>
+
+            <div className="input-group">
+              <label className="primary-medium">Years Staying</label>
+
+              <input
+                className="primary-regular"
+                type="text"
+                placeholder="10 years"
+              />
+            </div>
+
+            <div className="insight-card">
+              <p className="helper-medium">
+                These inputs are based on your financial profile. Feel free to
+                adjust any values.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="results-panel">
+          <div className="panel-header">
+            <h2 className="card-bold">Results</h2>
+
+            <p className="helper-regular">Cost comparison over 10 years</p>
+          </div>
+
+          {/* RESULTS TABLE */}
+
+          <div className="results-table">
+            <div className="results-table-header body-semibold">
+              <span>Option</span>
+              <span>Total Cost</span>
+              <span>Difference vs Renting</span>
+            </div>
+
+            <div className="results-table-row primary-medium">
+              <div className="result-option">
+                <div className="result-dot renting"></div>
+                Renting
+              </div>
+
+              <span>$240,000</span>
+
+              <span>-</span>
+            </div>
+
+            <div className="results-table-row primary-medium">
+              <div className="result-option">
+                <div className="result-dot buying"></div>
+                Buying
+              </div>
+
+              <span>$282,000</span>
+
+              <span className="negative-text">+$42,000</span>
+            </div>
+          </div>
+
+          {/* BREAKDOWN */}
+
+          <div className="breakdown-section">
+            <div className="breakdown-header">
+              <h3 className="body-semibold">Monthly Cost Breakdown</h3>
+            </div>
+
+            <div className="breakdown-grid">
+              <div className="breakdown-card renting">
+                <span className="helper-medium">Renting</span>
+
+                <div className="value-md">$2,000</div>
+
+                <p className="primary-medium">Your monthly rent</p>
+              </div>
+
+              <div className="breakdown-card buying">
+                <span className="helper-medium">Buying</span>
+
+                <div className="value-md">$2,350</div>
+
+                <p className="primary-medium">Monthly ownership cost</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CHART */}
+
+          <div className="chart-section">
+            <div className="chart-header">
+              <h3 className="body-semibold">Total cost over time</h3>
+
+              <button className="chart-filter primary-medium">
+                Over 10 years
+              </button>
+            </div>
+
+            <div className="chart-placeholder helper-medium">
+              Chart goes here
+            </div>
+          </div>
+
+          {/* INSIGHT */}
+
+          <div className="insight-card">
+            <p className="helper-medium">
+              Break-even is the point where buying becomes less expensive than
+              renting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,286 @@
+.tools-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tools-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tool-tabs {
+  display: flex;
+  gap:var(--space-16);
+  flex-wrap: wrap;
+}
+
+.tool-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+
+  height: 48px;
+
+  padding: 0 var(--space-20);
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-primary);
+
+  background: var(--color-surface-primary);
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.tool-tab.active {
+  background: var(--color-tab-active);
+  color: var(--color-primary);
+}
+
+.tool-tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--color-primary);
+
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.tools-panel,
+.results-panel {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+  padding: 24px;
+
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+
+  background: white;
+}
+
+/* =========================
+   LEFT COLUMN - TOOLS
+========================= */
+
+.panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.panel-header p {
+  color: #6b7280;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group input {
+  height: 48px;
+
+  padding: 0 16px;
+
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+
+  background: white;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #0067a7;
+}
+/* =========================
+   RESULTS PANEL
+========================= */
+
+.results-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+/* =========================
+   RESULTS TABLE
+========================= */
+
+.results-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-table-header,
+.results-table-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+
+  align-items: center;
+
+  padding: var(--space-16) 0;
+
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.result-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.result-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 999px;
+}
+
+.result-dot.renting {
+  background: var(--color-primary);
+}
+
+.result-dot.buying {
+  background: var(--color-teal);
+}
+
+.negative-text {
+  color: var(--color-danger);
+}
+
+/* =========================
+   BREAKDOWN
+========================= */
+
+.breakdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--space-16);
+}
+
+.breakdown-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+
+  padding: var(--space-20);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface-secondary);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.breakdown-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+}
+
+.breakdown-card.renting::before {
+  background: var(--color-primary);
+}
+
+.breakdown-card.buying::before {
+  background: var(--color-teal);
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart-filter {
+  height: 40px;
+
+  padding: 0 var(--space-16);
+
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-primary);
+
+  background: var(--color-surface-primary);
+}
+
+.chart-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 280px;
+
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border-primary);
+
+  background: var(--color-surface-primary);
+}
+
+/* =========================
+   INSIGHT CARD
+========================= */
+
+.insight-card {
+  padding: var(--space-16);
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-primary);
+
+  background: var(--color-surface-secondary);
+}
