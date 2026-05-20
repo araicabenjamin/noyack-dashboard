@@ -1,7 +1,50 @@
 import "./Tools.css";
 import { Banknote, CreditCard, House } from "lucide-react";
 
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
+
 export const Tools = () => {
+  {
+    /* DATA*/
+  }
+  const chartData = [
+    {
+      year: "Now",
+      renting: 120000,
+      buying: 80000,
+    },
+
+    {
+      year: "2 Years",
+      renting: 180000,
+      buying: 140000,
+    },
+
+    {
+      year: "4 Years",
+      renting: 260000,
+      buying: 220000,
+    },
+
+    {
+      year: "6 Years",
+      renting: 340000,
+      buying: 350000,
+    },
+
+    {
+      year: "8 Years",
+      renting: 400000,
+      buying: 470000,
+    },
+
+    {
+      year: "10 Years",
+      renting: 440000,
+      buying: 560000,
+    },
+  ];
+
   return (
     <div className="tools-page">
       <div className="tools-header">
@@ -197,7 +240,54 @@ export const Tools = () => {
             </div>
 
             <div className="chart-placeholder helper-medium">
-              Chart goes here
+              {/* RECHARTS */}
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={chartData}>
+                  <XAxis dataKey="year" axisLine={false} tickLine={false} />
+
+                  <YAxis
+                    width={60}
+                    axisLine={false}
+                    tickLine={false}
+                    tickFormatter={(value) => `$${value / 1000}k`}
+                    tick={{
+                      textAnchor: "start",
+                      fill: "#6B7280",
+                      dx: -55,
+                    }}
+                  />
+
+                  <Line
+                    type="monotone"
+                    dataKey="renting"
+                    stroke="#0067A7"
+                    strokeWidth={2}
+                    dot={{
+                      fill: "#0067A7",
+                      stroke: "#0067A7",
+                      strokeWidth: 2,
+                    }}
+                    activeDot={{
+                      r: 6,
+                    }}
+                  />
+
+                  <Line
+                    type="monotone"
+                    dataKey="buying"
+                    stroke="#01ABAD"
+                    strokeWidth={2}
+                    dot={{
+                      fill: "#01ABAD",
+                      stroke: "#01ABAD",
+                      strokeWidth: 2,
+                    }}
+                    activeDot={{
+                      r: 6,
+                    }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
             </div>
           </div>
 
