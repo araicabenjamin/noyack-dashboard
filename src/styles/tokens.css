@@ -21,7 +21,7 @@
 
   --color-surface-secondary: #F9FAFB;
 
-  --color-surface-blue: #F0F4FD;
+  --color-surface-blue: #F2F7FB;
 
   --color-surface-teal: rgba(1, 171, 173, 0.15);
 
@@ -193,7 +193,7 @@
 /* HELPERS */
 
 .helper-regular {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
   font-weight: 300;
   color: var(--color-text-muted);

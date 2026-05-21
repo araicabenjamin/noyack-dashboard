@@ -10,7 +10,7 @@ export function InsightsCard() {
 
       <div className="insights-body">
         <div className="insights-left">
-          <p className="insight-text">
+          <p className="insight-text helper-regular">
             Increase your monthly contribution by $200 to boost your retirement
             savings by $279,000
           </p>

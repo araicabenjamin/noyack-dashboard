@@ -284,3 +284,9 @@
 
   background: var(--color-surface-secondary);
 }
+
+.insight-text {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+}

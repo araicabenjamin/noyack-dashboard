@@ -1,5 +1,5 @@
 import "./Tools.css";
-import { Banknote, CreditCard, House } from "lucide-react";
+import { Banknote, CreditCard, House, Info, Lightbulb } from "lucide-react";
 
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
 
@@ -155,7 +155,8 @@ export const Tools = () => {
             </div>
 
             <div className="insight-card">
-              <p className="helper-medium">
+              <p className="insight-text helper-medium">
+                <Info className="card-icon" size={20} color="#0067A7" />
                 These inputs are based on your financial profile. Feel free to
                 adjust any values.
               </p>
@@ -294,7 +295,9 @@ export const Tools = () => {
           {/* INSIGHT */}
 
           <div className="insight-card">
-            <p className="helper-medium">
+            <p className="insight-text helper-medium">
+            <Lightbulb className="lightbulb-icon" size={20} color="#0067A7" />
+
               Break-even is the point where buying becomes less expensive than
               renting.
             </p>

@@ -20,12 +20,12 @@ export const Sidebar = () => {
       </div>
 
 <nav className="sidebar-nav">
-  <NavLink to="/" className="sidebar-item">
+  <NavLink to="/" className={(  { isActive }) => `sidebar-item ${isActive ? "active" : ""}`}>
     <LayoutDashboard />
     <span>Dashboard</span>
   </NavLink>
 
-  <NavLink to="/tools" className="sidebar-item">
+  <NavLink to="/tools" className={( { isActive }) => `sidebar-item ${isActive ? "active" : ""}`}>
     <Wrench />
     <span>Tools</span>
   </NavLink>

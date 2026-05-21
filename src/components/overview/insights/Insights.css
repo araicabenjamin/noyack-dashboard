@@ -8,7 +8,6 @@
 }
 
 
-
 .insights-header {
   display: flex;
   justify-content: space-between;
@@ -34,6 +33,7 @@
 .insight-button {
   padding: 10px 20px;
   border-radius: 8px;
+  margin-top: var(--space-16);
 
   border: 1px solid #01abad;
   background: transparent;
@@ -57,15 +57,9 @@
 
 }
 
-
 /* LEFT CONTENT */
 .insights-left {
-  max-width: 60%;
+  max-width: 65%;
+  
 }
 
-.insight-text {
-  font-size: 15px;
-  color: #374151;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
