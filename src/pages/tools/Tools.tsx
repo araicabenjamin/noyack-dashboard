@@ -1,16 +1,33 @@
-import "./Tools.css";
-import { Banknote, CreditCard, House, Info, Lightbulb } from "lucide-react";
+import { useState } from "react";
 
+import "./Tools.css";
+import {
+  calculateBuyingCost,
+  calculateRentingCost,
+} from "../../util/financial";
+import type { FinancialData } from "../../types/finance";
+
+import { Banknote, CreditCard, House, Info, Lightbulb } from "lucide-react";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
 
 export const Tools = () => {
-  {
-    /* DATA*/
-  }
+  const [inputs, setInputs] = useState<FinancialData>({
+    annualIncome: 100000,
+    monthlyBudget: 2500,
+    homePrice: 450000,
+    downPayment: 20,
+    interestRate: 6.5,
+    yearsStaying: 10,
+    mortgageTerm: 30,
+  });
+
+  const totalRentingCost = calculateRentingCost(inputs);
+  const totalBuyingCost = calculateBuyingCost(inputs);
+
   const chartData = [
     {
       year: "Now",
-      renting: 120000,
+      renting: totalRentingCost,
       buying: 80000,
     },
 
@@ -95,8 +112,11 @@ export const Tools = () => {
 
               <input
                 className="primary-regular"
-                type="text"
-                placeholder="$100,000"
+                type="number"
+                value={inputs.annualIncome}
+                onChange={(e) =>
+                  setInputs({ ...inputs, annualIncome: Number(e.target.value) })
+                }
               />
             </div>
 
@@ -105,8 +125,14 @@ export const Tools = () => {
 
               <input
                 className="primary-regular"
-                type="text"
-                placeholder="$2,500"
+                type="number"
+                value={inputs.monthlyBudget}
+                onChange={(e) =>
+                  setInputs({
+                    ...inputs,
+                    monthlyBudget: Number(e.target.value),
+                  })
+                }
               />
             </div>
 
@@ -115,8 +141,11 @@ export const Tools = () => {
 
               <input
                 className="primary-regular"
-                type="text"
-                placeholder="$450,000"
+                type="number"
+                value={inputs.homePrice}
+                onChange={(e) =>
+                  setInputs({ ...inputs, homePrice: Number(e.target.value) })
+                }
               />
             </div>
           </div>
@@ -125,23 +154,49 @@ export const Tools = () => {
             <div className="body-semibold">Assumptions</div>
 
             <div className="input-group">
-              <label className="primary-medium">Down Payment</label>
+              <label className="primary-medium">Down Payment (%)</label>
 
               <input
                 className="primary-regular"
-                type="text"
+                type="number"
                 placeholder="20%"
+                value={inputs.downPayment}
+                onChange={(e) =>
+                  setInputs({ ...inputs, downPayment: Number(e.target.value) })
+                }
               />
             </div>
 
             <div className="input-group">
-              <label className="primary-medium">Interest Rate</label>
+              <label className="primary-medium">Interest Rate (%)</label>
 
               <input
                 className="primary-regular"
-                type="text"
+                type="number"
                 placeholder="6.5%"
+                value={inputs.interestRate}
+                onChange={(e) =>
+                  setInputs({ ...inputs, interestRate: Number(e.target.value) })
+                }
               />
+            </div>
+
+            <div className="input-group">
+              <label className="primary-medium">Mortgage Term (Years)</label>
+
+              <select
+                value={inputs.mortgageTerm}
+                onChange={(e) =>
+                  setInputs({
+                    ...inputs,
+                    mortgageTerm: Number(e.target.value),
+                  })
+                }
+              >
+                <option value={15}>15 Years</option>
+                <option value={20}>20 Years</option>
+                <option value={30}>30 Years</option>
+              </select>
             </div>
 
             <div className="input-group">
@@ -149,8 +204,12 @@ export const Tools = () => {
 
               <input
                 className="primary-regular"
-                type="text"
+                type="number"
                 placeholder="10 years"
+                value={inputs.yearsStaying}
+                onChange={(e) =>
+                  setInputs({ ...inputs, yearsStaying: Number(e.target.value) })
+                }
               />
             </div>
 
@@ -164,10 +223,10 @@ export const Tools = () => {
           </div>
         </div>
 
+        {/* RIGHT COLUMN*/}
         <div className="results-panel">
           <div className="panel-header">
             <h2 className="card-bold">Results</h2>
-
             <p className="helper-regular">Cost comparison over 10 years</p>
           </div>
 
@@ -186,7 +245,7 @@ export const Tools = () => {
                 Renting
               </div>
 
-              <span>$240,000</span>
+              <span>{`$${totalRentingCost.toLocaleString()}`}</span>
 
               <span>-</span>
             </div>
@@ -197,7 +256,7 @@ export const Tools = () => {
                 Buying
               </div>
 
-              <span>$282,000</span>
+              <span>{`$${totalBuyingCost.toLocaleString()}`}</span>
 
               <span className="negative-text">+$42,000</span>
             </div>
@@ -296,8 +355,7 @@ export const Tools = () => {
 
           <div className="insight-card">
             <p className="insight-text helper-medium">
-            <Lightbulb className="lightbulb-icon" size={20} color="#0067A7" />
-
+              <Lightbulb className="lightbulb-icon" size={20} color="#0067A7" />
               Break-even is the point where buying becomes less expensive than
               renting.
             </p>
