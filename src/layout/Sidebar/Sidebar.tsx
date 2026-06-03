@@ -19,47 +19,67 @@ export const Sidebar = () => {
         <img src="/NOYACK Logo.png" alt="Noyack logo" />
       </div>
 
-<nav className="sidebar-nav">
-  <NavLink to="/" className={(  { isActive }) => `sidebar-item ${isActive ? "active" : ""}`}>
-    <LayoutDashboard />
-    <span>Dashboard</span>
-  </NavLink>
+      <nav className="sidebar-nav">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `sidebar-item ${isActive ? "active" : ""}`
+          }
+        >
+          <LayoutDashboard />
+          <span>Dashboard</span>
+        </NavLink>
 
-  <NavLink to="/tools" className={( { isActive }) => `sidebar-item ${isActive ? "active" : ""}`}>
-    <Wrench />
-    <span>Tools</span>
-  </NavLink>
+        <NavLink
+          to="/tools"
+          className={({ isActive }) =>
+            `sidebar-item ${isActive ? "active" : ""}`
+          }
+        >
+          <Wrench />
+          <span>Tools</span>
+        </NavLink>
 
-  <div className="sidebar-item">
-    <Calendar />
-    <span>Events</span>
-  </div>
+        <NavLink
+          to="/events"
+          className={({ isActive }) =>
+            `sidebar-item ${isActive ? "active" : ""}`
+          }
+        >
+          <Calendar />
+          <span>Events</span>
+        </NavLink>
 
-  <div className="sidebar-item">
-    <GraduationCap />
-    <span>Academy</span>
-  </div>
+        <NavLink
+          to="/library"
+          className={({ isActive }) =>
+            `sidebar-item ${isActive ? "active" : ""}`
+          }
+        >
+          <BookOpen />
+          <span>Library</span>
+        </NavLink>
 
-  <div className="sidebar-item">
-    <BookOpen />
-    <span>Library</span>
-  </div>
+        <div className="sidebar-item">
+          <GraduationCap />
+          <span>Academy</span>
+        </div>
 
-  <div className="sidebar-item">
-    <User />
-    <span>Wealth Profile</span>
-  </div>
+        <div className="sidebar-item">
+          <User />
+          <span>Wealth Profile</span>
+        </div>
 
-  <div className="sidebar-item">
-    <LifeBuoy />
-    <span>Support</span>
-  </div>
+        <div className="sidebar-item">
+          <LifeBuoy />
+          <span>Support</span>
+        </div>
 
-  <div className="sidebar-item">
-    <LogOut />
-    <span>Log out</span>
-  </div>
-</nav>
+        <div className="sidebar-item">
+          <LogOut />
+          <span>Log out</span>
+        </div>
+      </nav>
     </aside>
   );
 };

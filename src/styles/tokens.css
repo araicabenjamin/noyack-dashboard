@@ -5,63 +5,63 @@
 
   --color-text-primary: #111827;
 
-  --color-text-secondary: #6B7280;
+  --color-text-secondary: #6b7280;
 
-  --color-text-muted: #6B7280;
+  --color-text-muted: #64748b;
 
-  --color-text-inverse: #FFFFFF;
+  --color-text-inverse: #ffffff;
 
   /* =========================
      BACKGROUNDS / SURFACES
   ========================= */
 
-  --color-bg: #F8FAFC;
+  --color-bg: #f8fafc;
 
-  --color-surface-primary: #FFFFFF;
+  --color-surface-primary: #ffffff;
 
-  --color-surface-secondary: #F9FAFB;
+  --color-surface-secondary: #f9fafb;
 
-  --color-surface-blue: #F2F7FB;
+  --color-surface-blue: #f2f7fb;
 
   --color-surface-teal: rgba(1, 171, 173, 0.15);
 
-   --color-tab-active: #F2F5FD;
+  --color-tab-active: #f2f5fd;
 
   /* =========================
      BORDERS
   ========================= */
 
-  --color-border-primary: #E5E7EB;
+  --color-border-primary: #e5e7eb;
 
-  --color-border-secondary: #F0F4FD;
+  --color-border-secondary: #f0f4fd;
 
-  --color-border-interactive: #0067A7;
+  --color-border-interactive: #0067a7;
 
   /* =========================
      BRAND
   ========================= */
 
-  --color-primary: #0067A7;
+  --color-primary: #0067a7;
 
-  --color-teal: #01ABAD;
+  --color-teal: #01abad;
 
   /* =========================
      ACCENTS
   ========================= */
 
-  --color-purple: #7C3AED;
+  --color-purple: #7c3aed;
 
-  --color-orange: #F59E0B;
+  --color-orange: #f59e0b;
 
   /* =========================
      STATUS
   ========================= */
 
-  --color-success: #16A34A;
+  --color-success: #16a34a;
 
-  --color-warning: #D97706;
+  --color-warning: #d97706;
 
-  --color-danger: #DC2626;
+  --color-danger: #dc2626;
 
   /* =========================
      RADIUS
@@ -123,9 +123,11 @@
 }
 
 .page-semibold {
-  font-size: 25px;
-  line-height: 1.2;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 12px;
 }
 
 /* CARD HEADINGS */
@@ -134,14 +136,14 @@
   font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 .card-semibold {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 600;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 /* PRIMARY TEXT */
@@ -150,21 +152,29 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
+}
+
+.library-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  line-height: 1.1;
 }
 
 .primary-medium {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 500;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 .primary-semibold {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 /* BODY */
@@ -173,29 +183,28 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 .body-medium {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 500;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 .body-semibold {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
-  color: var(--color-text-primary)
+  color: var(--color-text-primary);
 }
 
 /* HELPERS */
 
 .helper-regular {
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--color-text-muted);
 }
 
@@ -210,7 +219,7 @@
   font-size: 14px;
   line-height: 1.4;
   font-weight: 600;
-  --color-text-muted: #9CA3AF;
+  --color-text-muted: #9ca3af;
 }
 
 /* META */

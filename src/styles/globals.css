@@ -136,8 +136,11 @@ p {
   flex-direction: column;
 }
 
+/* Controls Page padding on all pages */
 .content {
-  padding: 9px 24px 24px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .dashboard-grid {
@@ -344,9 +347,6 @@ p {
   font-weight: 600;
 }
 
-/* =========================
-   ICON WRAPPER
-========================= */
 
 /* =========================
    USER PROFILE
