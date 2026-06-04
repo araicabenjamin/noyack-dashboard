@@ -1,5 +1,6 @@
 .sidebar {
   background: var(--color-surface-primary);
+  box-shadow: 6px 0 24px rgba(15, 23, 42, 0.04);
 }
 
 .logo {

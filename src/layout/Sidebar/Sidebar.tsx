@@ -65,10 +65,15 @@ export const Sidebar = () => {
           <span>Academy</span>
         </div>
 
-        <div className="sidebar-item">
+        <NavLink
+          to="/wealth-profile"
+          className={({ isActive }) =>
+            `sidebar-item ${isActive ? "active" : ""}`
+          }
+        >
           <User />
           <span>Wealth Profile</span>
-        </div>
+        </NavLink>
 
         <div className="sidebar-item">
           <LifeBuoy />

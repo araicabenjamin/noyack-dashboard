@@ -123,8 +123,8 @@
 }
 
 .page-semibold {
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   color: #0f172a;
   line-height: 1.1;
   margin-bottom: 12px;
@@ -153,14 +153,6 @@
   line-height: 1.2;
   font-weight: 400;
   color: var(--color-text-primary);
-}
-
-.library-header h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 12px;
-  line-height: 1.1;
 }
 
 .primary-medium {

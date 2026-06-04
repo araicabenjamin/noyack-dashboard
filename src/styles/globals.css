@@ -138,9 +138,8 @@ p {
 
 /* Controls Page padding on all pages */
 .content {
-  padding: 20px 40px;
+  padding: 25px 40px;
   max-width: 1400px;
-  margin: 0 auto;
 }
 
 .dashboard-grid {
@@ -157,7 +156,6 @@ p {
 /* =========================
    TOPBAR
 ========================= */
-
 .topbar {
   display: flex;
   align-items: center;
