@@ -138,7 +138,7 @@ p {
 
 /* Controls Page padding on all pages */
 .content {
-  padding: 40px;
+  padding: 20px 40px;
   max-width: 1400px;
   margin: 0 auto;
 }
