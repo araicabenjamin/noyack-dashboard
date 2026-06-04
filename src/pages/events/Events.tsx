@@ -105,12 +105,10 @@ export function Events() {
         <h1 className="page-semibold">Upcoming Events</h1>
 
         <p className="helper-regular">
-  Join expert-led webinars, workshops, and networking events.
-  <br />
-  Learn from industry professionals and expand your
-  financial knowledge.
-</p>
-
+          Join expert-led webinars, workshops, and networking events.
+          <br />
+          Learn from industry professionals and expand your financial knowledge.
+        </p>
       </div>
 
       {/* Search */}
