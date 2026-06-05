@@ -37,7 +37,7 @@ export function ProfileCompletionCard() {
 
       </div>
 
-      <button className="completion-button">
+      <button className="text-button">
         View Missing Items →
       </button>
 

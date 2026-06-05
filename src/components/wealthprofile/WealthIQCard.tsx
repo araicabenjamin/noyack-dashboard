@@ -3,12 +3,13 @@ import {
   RadialBarChart,
   RadialBar,
   ResponsiveContainer,
+  PolarAngleAxis,
 } from "recharts";
 
 const data = [
   {
     name: "score",
-    value: 100,
+    value: 742,
     fill: "url(#wealthGradient)",
   },
 ];
@@ -21,14 +22,13 @@ export function WealthIQCard() {
           <Brain size={18} />
         </div>
 
-        <h3 className="card-semibold">
-          Wealth IQ Score
-        </h3>
+        <h3 className="card-semibold">Wealth IQ Score</h3>
       </div>
 
       <div className="wealth-iq-chart">
         <ResponsiveContainer width="100%" height="100%">
           <RadialBarChart
+            data={data}
             cx="50%"
             cy="50%"
             innerRadius="82%"
@@ -36,7 +36,6 @@ export function WealthIQCard() {
             startAngle={90}
             endAngle={-270}
             barSize={14}
-            data={data}
           >
             <defs>
               <linearGradient
@@ -46,20 +45,17 @@ export function WealthIQCard() {
                 x2="100%"
                 y2="100%"
               >
-                <stop
-                  offset="0%"
-                  stopColor="#0067A7"
-                />
-                <stop
-                  offset="100%"
-                  stopColor="#01ABAD"
-                />
+                <stop offset="0%" stopColor="var(--brand-blue)" />
+
+                <stop offset="100%" stopColor="var(--brand-teal)" />
               </linearGradient>
             </defs>
 
+            <PolarAngleAxis type="number" domain={[0, 1000]} tick={false} />
+
             <RadialBar
-              background
               dataKey="value"
+              background={{ fill: "#E5E7EB" }}
               fill="url(#wealthGradient)"
               cornerRadius={12}
             />
@@ -67,17 +63,11 @@ export function WealthIQCard() {
         </ResponsiveContainer>
 
         <div className="wealth-iq-center">
-          <div className="wealth-iq-score">
-            742
-          </div>
+          <div className="wealth-iq-score">742</div>
 
-          <div className="wealth-iq-rank">
-            Top 18%
-          </div>
+          <div className="wealth-iq-rank">Top 18%</div>
 
-          <div className="wealth-iq-members">
-            of Noyack members
-          </div>
+          <div className="wealth-iq-members">of Noyack members</div>
         </div>
       </div>
 

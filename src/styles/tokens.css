@@ -28,7 +28,7 @@
   --color-tab-active: #f2f5fd;
 
   /* =========================
-     BORDERS
+     BORDER
   ========================= */
 
   --color-border-primary: #e5e7eb;
@@ -38,12 +38,28 @@
   --color-border-interactive: #0067a7;
 
   /* =========================
-     BRAND
+   BRAND
+========================= */
+
+  --brand-navy: #011e5a;
+  --brand-blue: #0067a7;
+  --brand-teal: #01abad;
+
+  /* compatibility aliases */
+
+  --color-primary: var(--brand-blue);
+  --color-secondary: var(--brand-navy);
+  --color-teal: var(--brand-teal);
+
+  /* =========================
+     GRADIENT
   ========================= */
 
-  --color-primary: #0067a7;
-
-  --color-teal: #01abad;
+  --gradient-brand: linear-gradient(
+    90deg,
+    var(--brand-blue) 0%,
+    var(--brand-teal) 100%
+  );
 
   /* =========================
      ACCENTS
@@ -211,7 +227,7 @@
   font-size: 14px;
   line-height: 1.4;
   font-weight: 600;
-  --color-text-muted: #9ca3af;
+  color: var(--color-text-muted);
 }
 
 /* META */

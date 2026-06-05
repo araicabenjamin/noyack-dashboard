@@ -36,17 +36,65 @@ export function BasicInfoCard() {
       </div>
 
       <div className="basic-info-content">
+<div className="basic-info-progress">
 
-        <div className="basic-info-progress">
+  <div className="basic-info-ring">
 
-          <div className="basic-info-ring">
-            <div className="basic-info-ring-inner">
-              <span>80%</span>
-              <small>Complete</small>
-            </div>
-          </div>
+    <svg
+      width="180"
+      height="180"
+      viewBox="0 0 180 180"
+    >
+      <defs>
+        <linearGradient
+          id="basicInfoGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop
+            offset="0%"
+            stopColor="var(--brand-blue)"
+          />
 
-        </div>
+          <stop
+            offset="100%"
+            stopColor="var(--brand-teal)"
+          />
+        </linearGradient>
+      </defs>
+
+      <circle
+        cx="90"
+        cy="90"
+        r="70"
+        fill="none"
+        stroke="#edf2f7"
+        strokeWidth="16"
+      />
+
+      <circle
+        cx="90"
+        cy="90"
+        r="70"
+        fill="none"
+        stroke="url(#basicInfoGradient)"
+        strokeWidth="12"
+        strokeLinecap="round"
+        strokeDasharray="351.86 439.82"
+        transform="rotate(-90 90 90)"
+      />
+    </svg>
+
+    <div className="basic-info-ring-inner">
+      <span>80%</span>
+      <small>Complete</small>
+    </div>
+
+  </div>
+
+</div>
 
         <div className="info-column">
 

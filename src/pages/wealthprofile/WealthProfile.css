@@ -139,11 +139,7 @@
 
   border-radius: 999px;
 
-  background: linear-gradient(
-    90deg,
-    var(--color-primary),
-    var(--color-teal)
-  );
+  background: var(--gradient-brand);
 }
 
 .warning-text {
@@ -344,58 +340,60 @@
    PROGRESS RING
 ========================= */
 
+/* =========================
+   BASIC INFO RING
+========================= */
+
 .basic-info-progress {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .basic-info-ring {
-  width: 170px;
-  height: 170px;
+  position: relative;
 
-  border-radius: 50%;
-
-  background:
-    conic-gradient(
-      #1f5eff 0deg,
-      #16d2c5 288deg,
-      #edf2f7 288deg,
-      #edf2f7 360deg
-    );
+  width: 180px;
+  height: 180px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.basic-info-ring svg {
+  width: 220px;
+  height: 220px;
+
+  overflow: visible;
+}
+
 .basic-info-ring-inner {
-  width: 138px;
-  height: 138px;
-
-  border-radius: 50%;
-
-  background: white;
+  position: absolute;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
 }
 
 .basic-info-ring-inner span {
   font-size: 48px;
-  font-weight: 700;
   line-height: 1;
+  font-weight: 700;
 
-  color: #0f172a;
+  color: var(--color-text-primary);
 }
 
 .basic-info-ring-inner small {
-  margin-top: 6px;
+  margin-top: 8px;
 
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 500;
 
-  color: #64748b;
+  color: var(--color-text-secondary);
 }
 
 /* =========================
@@ -523,8 +521,6 @@
   }
 }
 
-
-
 /* =========================
    PROFILE INSIGHTS CARD
 ========================= */
@@ -644,9 +640,6 @@
 }
 
 
-
-
-
 /* =========================
    WEALTH IQ CARD
 ========================= */
@@ -760,12 +753,7 @@
   height: 100%;
 
   border-radius: 999px;
-
-  background: linear-gradient(
-    90deg,
-    #1f5eff,
-    #16d2c5
-  );
+  background: var(--gradient-brand);
 }
 
 .completion-warning {
@@ -775,29 +763,6 @@
   font-weight: 500;
 
   color: #f59e0b;
-}
-
-.completion-button {
-  margin-top: auto;
-  border: none;
-
-  width: fit-content;
-
-  padding: 12px 20px;
-
- 
-
-
-  background: white;
-
-  color: var(--color-primary);
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.2s ease;
 }
 
 .completion-button:hover {
