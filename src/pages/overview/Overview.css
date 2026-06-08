@@ -1,0 +1,135 @@
+/* =========================
+   OVERVIEW PAGE
+========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.grid-motion-wrapper {
+  display: contents;
+}
+
+/* =========================
+   DASHBOARD HEADER
+========================= */
+
+.dashboard-header {
+  margin-bottom: 25px;
+}
+
+.greeting {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+
+  color: var(--text);
+}
+
+.subtext {
+  margin-top: 3px;
+
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =========================
+   COLUMN LAYOUTS
+========================= */
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.left-column {
+  grid-column: 1 / span 2;
+}
+
+.right-column {
+  grid-column: 3 / span 2;
+  height: 100%;
+}
+
+/* =========================
+   NET WORTH CARD
+========================= */
+
+.networth-card {
+  border: none;
+  background: var(--gradient-brand);
+
+  color: white;
+}
+
+.networth-card .card-title,
+.networth-card .card-change {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.networth-card .card-value {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions-card {
+  grid-column: 3 / span 2;
+  grid-row: 3;
+
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.actions button {
+  padding: 10px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+
+  background: var(--surface-secondary);
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   RECENT ACTIVITY
+========================= */
+
+.recent-activity-card {
+  grid-column: span 2;
+}
+
+.activity-list {
+  margin-top: 12px;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.activity-list li {
+  margin-bottom: 10px;
+
+  font-size: 13px;
+
+  color: var(--muted);
+}

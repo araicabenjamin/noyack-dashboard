@@ -1,74 +1,4 @@
 /* =========================
-   DESIGN TOKENS
-========================= */
-
-:root {
-  --bg: #f9f9fa;
-
-  --surface: #ffffff;
-  --surface-secondary: #f9fafb;
-
-  --border: #e5e7eb;
-
-  --text: #111827;
-  --muted: #6b7280;
-
-  --positive: #10b981;
-  --negative: #ef4444;
-
-  --gradient-primary: linear-gradient(135deg, #0067a7, #69c8c9);
-
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-full: 999px;
-
-  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.06);
-
-  --transition-default: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* =========================
-   FONTS
-========================= */
-
-@font-face {
-  font-family: "Jeko";
-  src: url("/fonts/Jeko-Light.otf") format("opentype");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Jeko";
-  src: url("/fonts/Jeko-Regular.otf") format("opentype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Jeko";
-  src: url("/fonts/Jeko-Medium.otf") format("opentype");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Jeko";
-  src: url("/fonts/Jeko-SemiBold.otf") format("opentype");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Jeko";
-  src: url("/fonts/Jeko-Bold.otf") format("opentype");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Jeko";
-  src: url("/fonts/Jeko-Black.otf") format("opentype");
-  font-weight: 800;
-}
-
-/* =========================
    RESET
 ========================= */
 
@@ -80,7 +10,7 @@
 
 body {
   font-family: "Jeko", sans-serif;
-  background-color: var(--bg);
+  background-color: var(--color-bg);
 }
 
 button,
@@ -112,7 +42,8 @@ p {
 
 .gradient-text {
   display: inline-block;
-  background: linear-gradient(90deg, #0067a7, #69c8c9);
+
+  background: var(--gradient-brand);
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -122,7 +53,7 @@ p {
 }
 
 /* =========================
-   LAYOUT
+   APP LAYOUT
 ========================= */
 
 .app-layout {
@@ -136,26 +67,15 @@ p {
   flex-direction: column;
 }
 
-/* Controls Page padding on all pages */
 .content {
   padding: 25px 40px;
   max-width: 1400px;
 }
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.grid-motion-wrapper {
-  display: contents;
-}
-
 /* =========================
    TOPBAR
 ========================= */
+
 .topbar {
   display: flex;
   align-items: center;
@@ -184,10 +104,10 @@ p {
 
   padding: 10px 25px;
 
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 999px;
 
-  background: var(--surface);
+  background: var(--color-surface-primary);
 }
 
 .search-input {
@@ -203,11 +123,7 @@ p {
   font-size: 14px;
   font-weight: 400;
 
-  color: var(--muted);
-}
-
-.search-input:focus {
-  border-color: #0ea5e9;
+  color: var(--color-text-muted);
 }
 
 .search-logo {
@@ -219,30 +135,7 @@ p {
 .search-divider {
   width: 1px;
   height: 18px;
-  background: var(--border);
-}
-
-/* =========================
-   DASHBOARD HEADER
-========================= */
-
-.dashboard-header {
-  margin-bottom: 25px;
-}
-
-.greeting {
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-
-  color: var(--text);
-}
-
-.subtext {
-  margin-top: 3px;
-
-  font-size: 14px;
-  color: var(--muted);
+  background: var(--color-border-primary);
 }
 
 /* =========================
@@ -252,22 +145,17 @@ p {
 .card {
   padding: 20px;
 
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--radius-md);
 
-  background: var(--surface);
+  background: var(--color-surface-primary);
 
   transition: var(--transition-default);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-}
-
-.card-header svg {
-  position: relative;
-  top: 3px;
+  box-shadow: var(--shadow-card-hover);
 }
 
 .card-header {
@@ -276,18 +164,25 @@ p {
   gap: 8px;
 }
 
+.card-header svg {
+  position: relative;
+  top: 3px;
+}
+
 .card-title {
   font-size: 16px;
   font-weight: 500;
 
-  color: var(--text);
+  color: var(--color-text-primary);
 }
 
 .card-value {
   margin-top: 5px;
 
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 600;
+
+  color: var(--color-text-primary);
 }
 
 .card-change {
@@ -297,54 +192,12 @@ p {
 }
 
 .card-change.positive {
-  color: var(--positive);
+  color: var(--color-success);
 }
 
 .card-change.negative {
-  color: var(--negative);
+  color: var(--color-danger);
 }
-
-/* =========================
-   COLUMN LAYOUTS
-========================= */
-
-.left-column,
-.right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.left-column {
-  grid-column: 1 / span 2;
-}
-
-.right-column {
-  grid-column: 3 / span 2;
-  height: 100%;
-}
-
-/* =========================
-   NET WORTH CARD
-========================= */
-
-.networth-card {
-  border: none;
-  background: var(--gradient-primary);
-
-  color: white;
-}
-
-.networth-card .card-title,
-.networth-card .card-change {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.networth-card .card-value {
-  font-size: 30px;
-  font-weight: 600;
-}
-
 
 /* =========================
    USER PROFILE
@@ -354,10 +207,10 @@ p {
   width: 62px;
   height: 62px;
 
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border-primary);
   border-radius: 50%;
 
-  background: var(--surface);
+  background: var(--color-surface-primary);
 
   cursor: pointer;
 
@@ -367,14 +220,14 @@ p {
 }
 
 .bell-button:hover {
-  background: #f3f4f6;
+  background: var(--color-surface-secondary);
 }
 
 .bell-button svg {
   width: 25px;
   height: 25px;
 
-  color: #0067a7;
+  color: var(--brand-blue);
 }
 
 .user-profile {
@@ -384,10 +237,10 @@ p {
 
   padding: 6px 25px 6px 10px;
 
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 999px;
 
-  background: var(--surface);
+  background: var(--color-surface-primary);
 }
 
 .avatar {
@@ -407,66 +260,10 @@ p {
   font-size: 15px;
   font-weight: 500;
 
-  color: var(--text);
+  color: var(--color-text-primary);
 }
 
 .user-role {
   font-size: 12px;
-  color: var(--muted);
-}
-
-/* =========================
-   QUICK ACTIONS
-========================= */
-
-.quick-actions-card {
-  grid-column: 3 / span 2;
-  grid-row: 3;
-
-  flex: 1;
-}
-
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  margin-top: 12px;
-}
-
-.actions button {
-  padding: 10px;
-
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-
-  background: var(--surface-secondary);
-
-  font-size: 13px;
-
-  cursor: pointer;
-}
-
-/* =========================
-   RECENT ACTIVITY
-========================= */
-
-.recent-activity-card {
-  grid-column: span 2;
-}
-
-.activity-list {
-  margin-top: 12px;
-
-  padding: 0;
-
-  list-style: none;
-}
-
-.activity-list li {
-  margin-bottom: 10px;
-
-  font-size: 13px;
-
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
