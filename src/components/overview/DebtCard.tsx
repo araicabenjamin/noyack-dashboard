@@ -14,7 +14,7 @@ export const DebtCard = () => {
         <h3 className="card-title">Debt</h3>
       </div>
 
-      <div className="card-value">
+      <div className="value-lg">
         ${debt.toLocaleString()}
       </div>
 

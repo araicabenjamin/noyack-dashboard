@@ -12,7 +12,7 @@ export const EmergencyFundCard = () => {
         <h3 className="card-title">Emergency Fund</h3>
       </div>
 
-      <div className="card-value">${getEmergencyFund().toLocaleString()}</div>
+      <div className="value-lg">${getEmergencyFund().toLocaleString()}</div>
 
       <div className="card-change positive">↑ 10% vs last year</div>
     </div>

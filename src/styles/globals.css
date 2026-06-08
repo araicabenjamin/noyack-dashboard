@@ -176,15 +176,6 @@ p {
   color: var(--color-text-primary);
 }
 
-.card-value {
-  margin-top: 5px;
-
-  font-size: 26px;
-  font-weight: 600;
-
-  color: var(--color-text-primary);
-}
-
 .card-change {
   margin-top: 8px;
 

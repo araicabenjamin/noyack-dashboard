@@ -72,10 +72,10 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.networth-card .card-value {
-  font-size: 30px;
+.networth-card .value-lg {
+  color: var(--color-text-inverse);
+
   font-weight: 500;
-  color: white;
 }
 
 /* =========================

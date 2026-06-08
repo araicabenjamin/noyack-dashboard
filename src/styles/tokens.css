@@ -271,7 +271,9 @@
 .value-lg {
   font-size: 28px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
+  margin-top: 5px;
+  color: var(--color-text-primary);
 }
 
 .value-md {

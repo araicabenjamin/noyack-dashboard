@@ -14,7 +14,7 @@ export const CashAvailableCard = () => {
         <h3 className="card-title">Cash Available</h3>
       </div>
 
-      <div className="card-value">${cashAvailable.toLocaleString()}</div>
+      <div className="value-lg">${cashAvailable.toLocaleString()}</div>
 
       <div className="card-change negative">↓ 8% vs last year</div>
     </div>
