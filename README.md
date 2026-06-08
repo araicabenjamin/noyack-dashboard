@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# Noyack Investor Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern investor portal designed to help members track their financial health, discover educational resources, attend exclusive events, and make informed financial decisions through interactive planning tools.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The Noyack Investor Dashboard provides a centralized experience for investors to manage their financial journey. The platform combines portfolio insights, wealth profiling, educational content, event management, and financial planning into a single intuitive interface.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dashboard Overview
 
-## Expanding the ESLint configuration
+* Personalized investor dashboard
+* Financial health metrics
+* Activity tracking
+* Quick access to key resources
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Wealth Profile
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Profile completion tracking
+* Wealth IQ assessment
+* Financial insights and recommendations
+* Household and financial information management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Events
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Featured investor events
+* Event discovery and registration
+* Category filtering
+* Speaker and attendee information
+
+### Financial Planning Tools
+
+* Rent vs Buy calculator
+* Cost comparison modeling
+* Scenario planning
+* Interactive financial visualizations
+
+### Resource Library
+
+* Educational content hub
+* Search and filtering
+* Curated investor resources
+* Personalized recommendations
+
+## Design System
+
+The interface is built using a custom design system featuring:
+
+* Consistent typography scale
+* Reusable component architecture
+* Brand token system
+* Responsive layouts
+* Accessible interaction patterns
+* Blue and teal financial branding
+
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Recharts
+* Lucide React
+* CSS
+
+## Screenshots
+
+### Dashboard Overview
+
+![Dashboard Overview](images/dashboard-overview.png)
+
+### Tools
+
+![Tools](images/dashboard-overview.png)
+
+### Events
+
+![Events](screenshots/events.png)
+
+### Financial Planning
+
+![Financial Planning](screenshots/financial-planning.png)
+
+### Resource Library
+
+![Resource Library](screenshots/library.png)
+
+## Installation
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Author
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Benjamin Araica

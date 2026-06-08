@@ -45,6 +45,12 @@
   --brand-blue: #0067a7;
   --brand-teal: #01abad;
 
+  --brand-blue-10: rgba(0, 103, 167, 0.1);
+  --brand-blue-15: rgba(0, 103, 167, 0.15);
+
+  --brand-teal-10: rgba(1, 171, 173, 0.1);
+  --brand-teal-15: rgba(1, 171, 173, 0.15);
+
   /* compatibility aliases */
 
   --color-primary: var(--brand-blue);
@@ -264,6 +270,12 @@
 
 .value-lg {
   font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.value-md {
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }

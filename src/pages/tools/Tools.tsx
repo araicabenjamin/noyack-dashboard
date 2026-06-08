@@ -7,7 +7,14 @@ import {
 } from "../../util/financial";
 import type { FinancialData } from "../../types/finance";
 
-import { Banknote, CreditCard, House, Info, Lightbulb } from "lucide-react";
+import {
+  Home,
+  Landmark,
+  CreditCard,
+  Receipt,
+  Info,
+  Lightbulb,
+} from "lucide-react";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
 
 export const Tools = () => {
@@ -74,22 +81,34 @@ export const Tools = () => {
 
       <div className="tool-tabs">
         <button className="tool-tab primary-medium active">
-          <House className="card-icon" size={20} color="#0067A7" />
+          <Home className="card-icon" size={20} color="var(--brand-blue)" />
           Rent vs Buy
         </button>
 
         <button className="tool-tab primary-medium">
-          <House className="card-icon" size={20} color="#111827" />
+          <Landmark
+            className="card-icon"
+            size={20}
+            
+          />
           Retirement
         </button>
 
         <button className="tool-tab primary-medium">
-          <CreditCard className="card-icon" size={20} color="#111827" />
+          <CreditCard
+            className="card-icon"
+            size={20}
+            
+          />
           Debt Payoff
         </button>
 
         <button className="tool-tab primary-medium">
-          <Banknote className="card-icon" size={20} color="#111827" />
+          <Receipt
+            className="card-icon"
+            size={20}
+            
+          />
           Tax Optimization
         </button>
       </div>
