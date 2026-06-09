@@ -1,6 +1,10 @@
+import { ProfileDropdown } from "../components/profileDropdown/ProfileDropdown";
 import { Bell } from "lucide-react";
+import { useState } from "react";
 
 export const TopBar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
   return (
     <div className="topbar">
       <div className="search-bar">
@@ -18,13 +22,21 @@ export const TopBar = () => {
           <Bell size={20} />
         </button>
 
-        <div className="user-profile">
-          <img src="Avatar.png" alt="Adam Mercer" className="avatar" />
+        <div className="profile-menu">
+          <button
+            className="user-profile"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
+            <img src="/Avatar.png" alt="Adam Mercer" className="avatar" />
 
-          <div className="user-info">
-            <span className="user-name">Adam Mercer</span>
-            <span className="user-role">Individual</span>
-          </div>
+            <div className="user-info">
+              <span className="user-name">Adam Mercer</span>
+              <span className="user-role">Individual</span>
+            </div>
+          </button>
+
+          {isDropdownOpen && <ProfileDropdown />}
+          
         </div>
       </div>
     </div>

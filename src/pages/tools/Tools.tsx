@@ -14,6 +14,7 @@ import {
   Receipt,
   Info,
   Lightbulb,
+  Calculator,
 } from "lucide-react";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis } from "recharts";
 
@@ -82,7 +83,7 @@ export const Tools = () => {
       <div className="tool-tabs">
         <button className="tool-tab primary-medium active">
           <Home className="card-icon" size={20} color="var(--brand-blue)" />
-          Rent vs Buy
+          Rent vs Buy 
         </button>
 
         <button className="tool-tab primary-medium">
@@ -91,7 +92,7 @@ export const Tools = () => {
             size={20}
             
           />
-          Retirement
+          Retirement Calculator
         </button>
 
         <button className="tool-tab primary-medium">
@@ -100,7 +101,7 @@ export const Tools = () => {
             size={20}
             
           />
-          Debt Payoff
+          Debt Payoff 
         </button>
 
         <button className="tool-tab primary-medium">
@@ -111,6 +112,19 @@ export const Tools = () => {
           />
           Tax Optimization
         </button>
+
+        <button className="tool-tab primary-medium">
+          <Calculator
+            className="card-icon"
+            size={20}
+            
+          />
+          Mortgage Calculator
+        </button>
+
+
+
+
       </div>
 
       <div className="tools-grid">
