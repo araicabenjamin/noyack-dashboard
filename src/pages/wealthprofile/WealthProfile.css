@@ -1,4 +1,4 @@
-.wealth-profile-page {
+.wealthProfilePage {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -8,172 +8,181 @@
    HEADER
 ========================= */
 
-.wealth-profile-header {
+.wealthProfileHeader {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 /* =========================
-   HERO SECTION
+   TABS
 ========================= */
 
-.wealth-profile-hero {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* =========================
-   PROFILE TABS
-========================= */
-
-.wealth-profile-tabs {
+.wealthProfileTabs {
   display: flex;
+  align-items: center;
+
+  background: var(--color-surface-primary);
 
   border: 1px solid var(--color-border-primary);
-  border-radius: var(--radius-xl);
-
-  background: white;
+  border-radius: var(--radius-lg);
 
   overflow: hidden;
 
-  margin-top: 8px;
-  margin-bottom: 8px;
+  position: sticky;
+  top: 24px;
+  z-index: 10;
 }
 
-.profile-tab {
+.wealthTab {
   flex: 1;
-
-  height: 72px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 
-  border: none;
-  background: white;
+  min-height: 72px;
 
-  cursor: pointer;
-
-  font-size: 16px;
-  font-weight: 500;
+  text-decoration: none;
 
   color: var(--color-text-secondary);
 
-  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+
+  transition: var(--transition-hover);
 }
 
-.profile-tab svg {
-  width: 18px;
-  height: 18px;
-
-  color: var(--color-text-secondary);
-
-  transition: color 0.2s ease;
+.wealthTab:hover {
+  background: var(--color-surface-secondary);
 }
 
-.profile-tab:hover {
-  background: #f8fafc;
-}
-
-.profile-tab.active {
+.wealthTab.active {
   color: var(--color-primary);
 
-  background: #f8fbff;
-
-  box-shadow: inset 0 -3px 0 var(--color-primary);
-}
-
-.profile-tab.active svg {
-  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
 }
 
 /* =========================
-   CARD SYSTEM
+   SECTION CARD
 ========================= */
 
-.profile-card,
-.basic-info-card {
-  padding: 24px;
+.wealthSection {
+  scroll-margin-top: 120px;
+}
 
-  border: 1px solid var(--color-border-primary);
-  border-radius: var(--radius-xl);
-
+.wealthCard {
   background: var(--color-surface-primary);
 
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+
+  padding: 32px;
 }
 
-.profile-card {
+.wealthCardHeader {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
 
-  min-height: 320px;
+  margin-bottom: 32px;
+}
+
+.wealthCardTitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.wealthCardIcon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: var(--color-surface-blue);
+
+  color: var(--color-primary);
+
+  flex-shrink: 0;
+}
+
+.wealthCardTitle h2 {
+  margin-bottom: 4px;
 }
 
 /* =========================
-   PROFILE COMPLETION
+   GRID
 ========================= */
 
-.completion-value {
-  font-size: 56px;
-  font-weight: 700;
+.wealthGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-  color: var(--color-primary);
+  gap: 0 64px;
 }
 
-.progress-bar {
-  width: 100%;
-  height: 10px;
+.wealthField {
+  padding: 20px 0;
 
-  border-radius: 999px;
-
-  background: #e5e7eb;
-
-  overflow: hidden;
+  border-top: 1px solid var(--color-border-primary);
 }
 
-.progress-fill {
-  height: 100%;
+.wealthField label {
+  display: block;
 
-  border-radius: 999px;
+  margin-bottom: 8px;
 
-  background: var(--gradient-brand);
-}
-
-.warning-text {
-  color: #f59e0b;
-
-  font-size: 14px;
+  font-size: var(--font-size-meta);
   font-weight: 500;
+
+  color: var(--color-text-secondary);
+}
+
+.wealthField p {
+  font-size: var(--font-size-body);
+  font-weight: 500;
+
+  color: var(--color-text-primary);
 }
 
 /* =========================
    BUTTONS
 ========================= */
 
-.secondary-button {
-  width: fit-content;
+.editButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-  padding: 12px 20px;
+  min-width: 110px;
+  height: 48px;
 
+  padding: 0 20px;
+
+  border: 1px solid var(--color-primary);
   border-radius: 12px;
-  border: 1px solid var(--color-border-primary);
 
-  background: white;
+  background: transparent;
+
+  color: var(--color-primary);
 
   cursor: pointer;
-
-  transition: all 0.2s ease;
 }
 
-.secondary-button:hover {
-  border-color: var(--color-primary);
+.editButton:hover {
+  background: var(--color-surface-blue);
 }
 
-.primary-button {
-  padding: 12px 20px;
+.primaryButton {
+  min-width: 120px;
+  height: 48px;
+
+  padding: 0 24px;
 
   border: none;
   border-radius: 12px;
@@ -183,590 +192,41 @@
   color: white;
 
   cursor: pointer;
-
-  transition: all 0.2s ease;
 }
 
-.primary-button:hover {
+.primaryButton:hover {
   opacity: 0.9;
 }
 
-.text-button {
-  margin-top: auto;
-
-  border: none;
-  background: transparent;
-
-  color: var(--color-primary);
-
-  cursor: pointer;
-
-  padding: 0;
-
-  font-weight: 500;
-}
-
 /* =========================
-   WEALTH IQ
+   MOBILE
 ========================= */
 
-.wealth-iq-circle {
-  width: 220px;
-  height: 220px;
-
-  margin: auto;
-
-  border-radius: 50%;
-
-  border: 14px solid #e5e7eb;
-  border-top-color: var(--color-primary);
-  border-right-color: var(--color-teal);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.wealth-iq-score {
-  font-size: 64px;
-  font-weight: 700;
-
-  color: var(--color-text-primary);
-}
-
-/* =========================
-   INSIGHTS
-========================= */
-
-.insights-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  list-style: none;
-  padding: 0;
-}
-
-.insights-list li {
-  line-height: 1.5;
-}
-
-/* =========================
-   BASIC INFO CARD
-========================= */
-
-.basic-info-card {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.basic-info-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.basic-info-header-left {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.basic-info-icon {
-  width: 64px;
-  height: 64px;
-
-  border-radius: 18px;
-
-  background: #f3f7fd;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--color-primary);
-
-  flex-shrink: 0;
-}
-
-.basic-info-header-left h3 {
-  margin-bottom: 4px;
-}
-
-/* =========================
-   EDIT PROFILE
-========================= */
-
-.edit-profile-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 0;
-
-  border: none;
-  background: transparent;
-
-  color: var(--color-primary);
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-/* =========================
-   CONTENT GRID
-========================= */
-
-.basic-info-content {
-  display: grid;
-
-  grid-template-columns:
-    240px
-    1fr
-    1fr;
-
-  gap: 48px;
-
-  align-items: center;
-}
-
-/* =========================
-   PROGRESS RING
-========================= */
-
-/* =========================
-   BASIC INFO RING
-========================= */
-
-.basic-info-progress {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.basic-info-ring {
-  position: relative;
-
-  width: 180px;
-  height: 180px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.basic-info-ring svg {
-  width: 220px;
-  height: 220px;
-
-  overflow: visible;
-}
-
-.basic-info-ring-inner {
-  position: absolute;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.basic-info-ring-inner span {
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 700;
-
-  color: var(--color-text-primary);
-}
-
-.basic-info-ring-inner small {
-  margin-top: 8px;
-
-  font-size: 16px;
-  font-weight: 500;
-
-  color: var(--color-text-secondary);
-}
-
-/* =========================
-   INFO COLUMNS
-========================= */
-
-.info-column {
-  position: relative;
-
-  min-height: 180px;
-}
-
-.info-column h4 {
-  margin-bottom: 20px;
-
-  font-size: 18px;
-  font-weight: 600;
-
-  color: #0f172a;
-}
-
-.info-column:not(:last-child)::after {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  right: -24px;
-
-  width: 1px;
-  height: 100%;
-
-  background: #edf2f7;
-}
-
-/* =========================
-   PRESENT INFO
-========================= */
-
-.info-present {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.info-present li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  color: #0f172a;
-}
-
-.info-present svg {
-  color: #22c55e;
-}
-
-/* =========================
-   MISSING INFO
-========================= */
-
-.info-missing {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.info-missing li {
-  position: relative;
-
-  padding-left: 18px;
-
-  color: #0f172a;
-}
-
-.info-missing li::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  top: 10px;
-
-  width: 6px;
-  height: 6px;
-
-  border-radius: 50%;
-
-  background: #f59e0b;
-}
-
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1200px) {
-  .wealth-profile-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .basic-info-content {
-    grid-template-columns: 1fr;
-  }
-
-  .completion-circle {
-    margin: 0 auto;
-  }
-
-  .wealth-profile-tabs {
+@media (max-width: 768px) {
+  .wealthProfileTabs {
     overflow-x: auto;
   }
 
-  .profile-tab {
+  .wealthTab {
     min-width: 160px;
   }
-}
 
-/* =========================
-   PROFILE INSIGHTS CARD
-========================= */
-
-.profile-card-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.profile-card-icon {
-  width: 40px;
-  height: 40px;
-
-  border-radius: 12px;
-
-  background: #f2f7fb;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-}
-
-.profile-card-icon svg {
-  color: var(--color-primary);
-}
-
-/* =========================
-   INSIGHTS LIST
-========================= */
-
-.insights-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  flex: 1;
-}
-
-.insight-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.insight-icon {
-  margin-top: 2px;
-
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.insight-icon.success svg {
-  color: #22c55e;
-}
-
-.insight-icon.warning svg {
-  color: #f59e0b;
-}
-
-.insight-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.insight-content h4 {
-  margin: 0;
-
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.3;
-
-  color: #0f172a;
-}
-
-.insight-content p {
-  margin: 0;
-
-  font-size: 14px;
-  line-height: 1.5;
-
-  color: #64748b;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.text-button {
-  margin-top: auto;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  padding: 0;
-
-  border: none;
-  background: transparent;
-
-  color: var(--color-primary);
-
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-.text-button:hover {
-  opacity: 0.8;
-}
-
-
-/* =========================
-   WEALTH IQ CARD
-========================= */
-
-.wealth-iq-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.wealth-iq-card .profile-card-header {
-  width: 100%;
-}
-
-.wealth-iq-chart {
-  position: relative;
-  width: 290px;
-  height: 290px;
-
-}
-
-.wealth-iq-center {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
-}
-
-.wealth-iq-score {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.wealth-iq-rank {
-  margin-top: 6px;
-
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.wealth-iq-members {
-  margin-top: 2px;
-
-  font-size: 14px;
-  line-height: 1.3;
-}
-
-.wealth-iq-button {
-  margin: -6px auto 0;
-}
-
-
-
-/* =========================
-   PROFILE COMPLETION CARD
-========================= */
-
-.profile-completion-card {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-}
-
-.completion-content {
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 8px;
-}
-
-.completion-value {
-  font-size: 55px;
-  font-weight: 600;
-  line-height: 1;
-
-  color: var(--color-primary);
-}
-
-.completion-label {
-  margin-top: 8px;
-
-  font-size: 16px;
-  font-weight: 500;
-
-  color: var(--color-text-secondary);
-}
-
-.progress-bar {
-  width: 100%;
-  height: 12px;
-
-  margin-top: 20px;
-
-  background: #edf1f5;
-
-  border-radius: 999px;
-
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-
-  border-radius: 999px;
-  background: var(--gradient-brand);
-}
-
-.completion-warning {
-  margin-top: 20px;
-
-  font-size: 15px;
-  font-weight: 500;
-
-  color: #f59e0b;
-}
-
-.completion-button:hover {
-
-
-  background: #fafcff;
+  .wealthCard {
+    padding: 24px;
+  }
+
+  .wealthCardHeader {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .wealthGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .editButton,
+  .primaryButton {
+    width: 100%;
+  }
 }

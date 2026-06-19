@@ -1,5 +1,5 @@
 import { AppLayout } from "./layout/AppLayout";
-
+import { Support } from "./pages/support/Support";
 import { Route, Routes } from "react-router-dom";
 
 import { Overview } from "./pages/overview/Overview";
@@ -17,6 +17,7 @@ function App() {
         <Route path="/library" element={<Library />} />
         <Route path="/events" element={<Events />} />
         <Route path="/wealth-profile" element={<WealthProfile />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </AppLayout>
   );

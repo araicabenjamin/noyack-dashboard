@@ -74,12 +74,17 @@ export const Sidebar = () => {
           <User />
           <span>Wealth Profile</span>
         </NavLink>
-        
+
         <div className="sidebar-footer">
-          <div className="sidebar-item">
+          <NavLink
+            to="/support"
+            className={({ isActive }) =>
+              `sidebar-item ${isActive ? "active" : ""}`
+            }
+          >
             <LifeBuoy />
             <span>Support</span>
-          </div>
+          </NavLink>
 
           <div className="sidebar-item">
             <LogOut />
