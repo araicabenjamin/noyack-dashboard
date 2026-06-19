@@ -229,12 +229,12 @@
 }
 
 .breakdown-card.renting {
-  background: rgba(0, 103, 167, 0.08);
+  background: var(--color-surface-blue);
   border: 1px solid rgba(0, 103, 167, 0.15);
 }
 
 .breakdown-card.buying {
-  background: rgba(1, 171, 173, 0.08);
+  background: #e8f6f6;
   border: 1px solid rgba(1, 171, 173, 0.15);
 }
 
@@ -256,14 +256,6 @@
 
 .breakdown-card.buying::before {
   background: var(--brand-teal);
-}
-
-.breakdown-card .helper-medium {
-  color: var(--color-text-muted);
-}
-
-.breakdown-card .primary-medium {
-  color: var(--color-text-primary);
 }
 
 /* =========================

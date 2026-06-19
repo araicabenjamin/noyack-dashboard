@@ -1,5 +1,6 @@
 import { PieChart } from "lucide-react";
-import { getNetWorth } from "../../data/financialCalculations";
+import "./NetWorthCard.css";
+import { getNetWorth } from "../../../../data/financialCalculations";
 
 const netWorth = getNetWorth();
 

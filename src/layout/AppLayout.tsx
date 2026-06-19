@@ -1,5 +1,5 @@
 import { Sidebar } from "./Sidebar/Sidebar";
-import { TopBar } from "./TopBar";
+import { TopBar } from "./Topbar/TopBar";
 
 type AppLayoutProps = {
   children: React.ReactNode;

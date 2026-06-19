@@ -1,6 +1,6 @@
 import "./Overview.css";
 
-import { NetWorthCard } from "../../components/overview/NetWorthCard";
+import { NetWorthCard } from "../../components/overview/quickActions/NetWorthCard/NetWorthCard";
 import { DebtCard } from "../../components/overview/DebtCard";
 import { EmergencyFundCard } from "../../components/overview/EmergencyFundCard";
 import { CashAvailableCard } from "../../components/overview/CashAvailableCard";
@@ -29,7 +29,7 @@ export const Overview = () => {
             <span className="wave">👋</span>
           </h1>
 
-          <p className="subtext">
+          <p className="helper-regular">
             This is the latest update for the last 7 days.
           </p>
         </div>

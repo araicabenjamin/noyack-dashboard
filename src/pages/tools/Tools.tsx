@@ -304,19 +304,27 @@ export const Tools = () => {
 
             <div className="breakdown-grid">
               <div className="breakdown-card renting">
-                <span className="helper-medium">Renting</span>
+                <span className="helper-medium" style={{ color: "var(--brand-blue)" }}>
+                  Renting
+                </span>
 
                 <div className="value-md">$2,000</div>
 
-                <p className="primary-medium">Your monthly rent</p>
+                <p className="helper-medium" style={{ color: "var(--brand-blue)" }}>
+                  Your monthly rent
+                </p>
               </div>
 
               <div className="breakdown-card buying">
-                <span className="helper-medium">Buying</span>
+                <span className="helper-medium"  style={{ color: "var(--brand-teal)" }}>
+                  Buying
+                </span>
 
                 <div className="value-md">$2,350</div>
 
-                <p className="primary-medium">Monthly ownership cost</p>
+                <p className="helper-medium" style={{ color: "var(--brand-teal)" }}>
+                  Monthly ownership cost
+                </p>
               </div>
             </div>
           </div>

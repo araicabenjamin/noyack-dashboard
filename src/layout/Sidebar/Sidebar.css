@@ -49,3 +49,16 @@
 
 
 
+/* =========================
+   MEDIA QUERIES - <768px 
+========================= */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .app-layout {
+  grid-template-columns: 1fr;
+}
+
+}

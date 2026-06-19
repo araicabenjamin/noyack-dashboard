@@ -1,3 +1,7 @@
+/* =========================
+   DESKTOP
+========================= */
+
 .action-row {
   display: flex;
   justify-content: space-between;
@@ -7,17 +11,14 @@
   border-bottom: 1px solid #eee;
 }
 
-
 .quick-actions-card {
-  padding: 20px 0; 
+  padding: 20px 0px 0px 0;
 }
 
 .quick-actions-card .card-title {
   padding: 0 20px;
   margin-bottom: 5px;
 }
-
-
 
 .icon-box {
   width: 40px;
@@ -31,7 +32,6 @@
 
   flex-shrink: 0; /* VERY IMPORTANT */
 }
-
 
 .action-left {
   display: flex;
@@ -62,4 +62,28 @@
 
 .action-row:last-child {
   border-bottom: none;
+}
+
+/* =========================
+   TABLET 1024px
+========================= */
+
+@media (max-width: 1024px) {
+  .action-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .quick-actions-card {
+    flex: none;
+  }
+
+  .quick-actions-card {
+    padding: 20px 0px 5px 0;
+  }
 }

@@ -1,5 +1,5 @@
 /* =========================
-   OVERVIEW PAGE
+   OVERVIEW PAGE - DESKTOP
 ========================= */
 
 .dashboard-grid {
@@ -132,4 +132,48 @@
   font-size: 13px;
 
   color: var(--muted);
+}
+
+
+
+/* =========================
+   OVERVIEW PAGE - TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .left-column,
+  .right-column {
+    grid-column: auto;
+  }
+
+  .quick-actions-card,
+  .recent-activity-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+}
+
+/* =========================
+   OVERVIEW PAGE - MOBILEs
+========================= */
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    grid-column: auto;
+  }
+
+   .content {
+    padding: 16px;
+  }
 }

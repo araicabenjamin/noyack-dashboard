@@ -12,6 +12,22 @@
   --color-text-inverse: #ffffff;
 
   /* =========================
+   TYPOGRAPHY TOKENS
+========================= */
+
+  --font-size-value-xl: 36px;
+
+  --font-size-value-lg: 28px;
+
+  --font-size-value-md: 20px;
+
+  --font-size-card-heading: 18px;
+
+  --font-size-body: 16px;
+  
+  --font-size-helper: 14px;
+
+  /* =========================
      BACKGROUNDS / SURFACES
   ========================= */
 
@@ -173,7 +189,7 @@
 }
 
 .card-semibold {
-  font-size: 18px;
+  font-size: var(--font-size-card-heading);
   line-height: 1.2;
   font-weight: 600;
   color: var(--color-text-primary);
@@ -234,14 +250,14 @@
 }
 
 .helper-medium {
-  font-size: 14px;
+  font-size: var(--font-size-helper);
   line-height: 1.4;
   font-weight: 500;
   color: var(--color-text-muted);
 }
 
 .helper-semibold {
-  font-size: 14px;
+  font-size: var(--font-size-helper);
   line-height: 1.4;
   font-weight: 600;
   color: var(--color-text-muted);
@@ -274,13 +290,13 @@
 /* VALUES */
 
 .value-xl {
-  font-size: 36px;
+  font-size: var(--font-size-value-xl);
   line-height: 1.2;
   font-weight: 600;
 }
 
 .value-lg {
-  font-size: 28px;
+  font-size: var(--font-size-value-lg);
   line-height: 1.2;
   font-weight: 500;
   margin-top: 5px;
@@ -288,7 +304,7 @@
 }
 
 .value-md {
-  font-size: 20px;
+  font-size: var(--font-size-value-md);
   line-height: 1.2;
   font-weight: 600;
 }
@@ -303,4 +319,21 @@
   font-size: 18px;
   line-height: 1.5;
   font-weight: 700;
+}
+
+
+/* =========================
+   MOBILE TOKENS
+========================= */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-value-lg: 42px;
+    --font-size-value-md: 24px;
+
+    --font-size-card-heading: 20px;
+    --font-size-card-title: 18px;
+
+    --font-size-helper: 16px;
+  }
 }

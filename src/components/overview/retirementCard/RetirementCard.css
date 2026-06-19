@@ -1,6 +1,4 @@
-.retirement-chart {
-    
-  
+.retirement-chart { 
   position: relative;
 }
 
@@ -108,9 +106,6 @@
 }
 
 
-
-
-
 /* SUMMARY */
 .retirement-summary {
   display: flex;
@@ -140,4 +135,21 @@
   margin-top: 16px;
   border-radius: 8px;
   background: linear-gradient(to top, #d1f2f2, transparent);
+}
+
+
+/* =========================
+   RETIREMENT CARD TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .retirement-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stat {
+    border-right: none !important;
+  }
 }
