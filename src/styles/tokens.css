@@ -15,17 +15,17 @@
    TYPOGRAPHY TOKENS
 ========================= */
 
-  --font-size-value-xl: 36px;
+  --font-size-sm: 14px;
 
-  --font-size-value-lg: 28px;
+  --font-size-md: 16px;
 
-  --font-size-value-md: 20px;
+  --font-size-lg: 18px;
 
-  --font-size-card-heading: 18px;
+  --font-size-xl: 20px;
 
-  --font-size-body: 16px;
-  
-  --font-size-helper: 14px;
+  --font-size-2xl: 28px;
+
+  --font-size-3xl: 36px;
 
   /* =========================
      BACKGROUNDS / SURFACES
@@ -158,38 +158,35 @@
 
   --space-40: 40px;
 }
-
 /* =========================
-   TYPOGRAPHY SYSTEM
+   UTILITY CLASSES
 ========================= */
 
-/* PAGE HEADINGS */
-
 .page-bold {
-  font-size: 25px;
+  font-size: var(--font-size-2xl);
   line-height: 1.2;
   font-weight: 700;
 }
 
 .page-semibold {
-  font-size: 36px;
+  font-size: var(--font-size-3xl);
   font-weight: 600;
-  color: #0f172a;
-  line-height: 1.1;
-  margin-bottom: 12px;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  
 }
 
 /* CARD HEADINGS */
 
 .card-bold {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 1.2;
   font-weight: 700;
   color: var(--color-text-primary);
 }
 
 .card-semibold {
-  font-size: var(--font-size-card-heading);
+  font-size: var(--font-size-lg);
   line-height: 1.2;
   font-weight: 600;
   color: var(--color-text-primary);
@@ -197,45 +194,25 @@
 
 /* PRIMARY TEXT */
 
-.primary-regular {
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: var(--color-text-primary);
-}
-
-.primary-medium {
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 500;
-  color: var(--color-text-primary);
-}
-
-.primary-semibold {
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: var(--color-text-primary);
-}
-
-/* BODY */
-
+.primary-regular,
 .body-regular {
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 1.2;
   font-weight: 400;
   color: var(--color-text-primary);
 }
 
+.primary-medium,
 .body-medium {
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 1.2;
   font-weight: 500;
   color: var(--color-text-primary);
 }
 
+.primary-semibold,
 .body-semibold {
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 1.2;
   font-weight: 600;
   color: var(--color-text-primary);
@@ -244,20 +221,21 @@
 /* HELPERS */
 
 .helper-regular {
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 1.7;
+  font-weight: 400;
   color: var(--color-text-muted);
 }
 
 .helper-medium {
-  font-size: var(--font-size-helper);
+  font-size: var(--font-size-md);
   line-height: 1.4;
   font-weight: 500;
   color: var(--color-text-muted);
 }
 
 .helper-semibold {
-  font-size: var(--font-size-helper);
+  font-size: var(--font-size-md);
   line-height: 1.4;
   font-weight: 600;
   color: var(--color-text-muted);
@@ -266,7 +244,7 @@
 /* META */
 
 .meta-regular {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
   line-height: 1.2;
   font-weight: 400;
 }
@@ -274,7 +252,7 @@
 /* BUTTONS */
 
 .button-medium {
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   line-height: 1.2;
   font-weight: 500;
 }
@@ -282,7 +260,7 @@
 /* BADGES */
 
 .badge-medium {
-  font-size: 12px;
+  font-size: var(--font-size-sm);
   line-height: 1.2;
   font-weight: 500;
 }
@@ -290,13 +268,13 @@
 /* VALUES */
 
 .value-xl {
-  font-size: var(--font-size-value-xl);
+  font-size: var(--font-size-3xl);
   line-height: 1.2;
   font-weight: 600;
 }
 
 .value-lg {
-  font-size: var(--font-size-value-lg);
+  font-size: var(--font-size-2xl);
   line-height: 1.2;
   font-weight: 500;
   margin-top: 5px;
@@ -304,23 +282,24 @@
 }
 
 .value-md {
-  font-size: var(--font-size-value-md);
+  font-size: var(--font-size-xl);
   line-height: 1.2;
   font-weight: 600;
 }
 
+/* EMPHASIS */
+
 .emphasis-semibold {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 1.2;
   font-weight: 600;
 }
 
 .emphasis-bold {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 1.5;
   font-weight: 700;
 }
-
 
 /* =========================
    MOBILE TOKENS

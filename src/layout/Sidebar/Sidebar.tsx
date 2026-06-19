@@ -15,9 +15,9 @@ import {
 export const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <div className="logo">
+      <NavLink to="/" className="logo">
         <img src="/NOYACK Logo.png" alt="Noyack logo" />
-      </div>
+      </NavLink>
 
       <nav className="sidebar-nav">
         <NavLink
@@ -74,15 +74,17 @@ export const Sidebar = () => {
           <User />
           <span>Wealth Profile</span>
         </NavLink>
+        
+        <div className="sidebar-footer">
+          <div className="sidebar-item">
+            <LifeBuoy />
+            <span>Support</span>
+          </div>
 
-        <div className="sidebar-item">
-          <LifeBuoy />
-          <span>Support</span>
-        </div>
-
-        <div className="sidebar-item">
-          <LogOut />
-          <span>Log out</span>
+          <div className="sidebar-item">
+            <LogOut />
+            <span>Log out</span>
+          </div>
         </div>
       </nav>
     </aside>
