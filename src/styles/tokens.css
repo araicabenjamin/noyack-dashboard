@@ -57,9 +57,12 @@
    BRAND
 ========================= */
 
-  --brand-navy: #011e5a;
+  /* Brand */
+
   --brand-blue: #0067a7;
   --brand-teal: #01abad;
+
+  /* Tints */
 
   --brand-blue-10: rgba(0, 103, 167, 0.1);
   --brand-blue-15: rgba(0, 103, 167, 0.15);
@@ -72,6 +75,30 @@
   --color-primary: var(--brand-blue);
   --color-secondary: var(--brand-navy);
   --color-teal: var(--brand-teal);
+
+  /* =========================
+   ACCENTS
+========================= */
+
+  /* Purple */
+  --accent-purple: #b26ec5;
+  --accent-purple-bg: #f2ebff;
+
+  /* Blue */
+  --accent-blue: var(--brand-blue);
+  --accent-blue-bg: #0067a7;
+
+  /* Orange */
+  --accent-orange: #d97706;
+  --accent-orange-bg: #fef3c7;
+
+  /* Pink */
+  --accent-pink: #be185d;
+  --accent-pink-bg: #fce7f3;
+
+  /* Teal */
+  --accent-teal: #01abad;
+  --accent-teal-bg: #ccfbf1;
 
   /* =========================
      GRADIENT
@@ -106,7 +133,7 @@
      STATUS
   ========================= */
 
-  --color-success: #16a34a;
+  --color-success: var(--brand-teal);
 
   --color-warning: #d97706;
 
@@ -173,7 +200,6 @@
   font-weight: 600;
   color: var(--color-text-primary);
   line-height: 1.4;
-  
 }
 
 /* CARD HEADINGS */
