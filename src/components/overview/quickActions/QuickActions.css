@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
 
   padding: 18px 20px;
   border-bottom: 1px solid #eee;

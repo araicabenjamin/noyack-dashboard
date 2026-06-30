@@ -118,10 +118,17 @@ p {
 
 .card-change.positive {
   color: var(--color-success);
+  font-weight: 600;
 }
 
 .card-change.negative {
   color: var(--color-danger);
+  font-weight: 600;
+}
+
+.card-change.label {
+  color: var(--color-text-secondary);
+  font-weight: 400;
 }
 
 /* =========================

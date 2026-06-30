@@ -1,5 +1,5 @@
 import { DollarSign } from "lucide-react";
-import { getEmergencyFund } from "../../data/financialCalculations";
+import { getEmergencyFund } from "../../../data/financialCalculations";
 
 export const EmergencyFundCard = () => {
   return (
@@ -14,7 +14,11 @@ export const EmergencyFundCard = () => {
 
       <div className="value-lg">${getEmergencyFund().toLocaleString()}</div>
 
-      <div className="card-change positive">↑ 10% vs last year</div>
+      <p className="card-change">
+        <span className="card-change positive">↑ 10%</span>
+        <span className="card-change label"> vs last year</span>
+      </p>
+
     </div>
   );
 };

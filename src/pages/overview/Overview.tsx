@@ -1,14 +1,14 @@
 import "./Overview.css";
 
-import { NetWorthCard } from "../../components/overview/quickActions/NetWorthCard/NetWorthCard";
-import { DebtCard } from "../../components/overview/DebtCard";
-import { EmergencyFundCard } from "../../components/overview/EmergencyFundCard";
-import { CashAvailableCard } from "../../components/overview/CashAvailableCard";
+import { NetWorthCard } from "../../components/Overview/NetWorthCard/NetWorthCard";
+import { DebtCard } from "../../components/Overview/DebtCard/DebtCard";
+import { EmergencyFundCard } from "../../components/Overview/EmergencyFundCard/EmergencyFundCard";
+import { CashAvailableCard } from "../../components/Overview/CashAvailableCard/CashAvailableCard";
 
-import { RetirementCard } from "../../components/overview/retirementCard/RetirementCard";
-import { InsightsCard } from "../../components/overview/insights/Insights";
-import { QuickActionsCard } from "../../components/overview/quickActions/QuickActions";
-import { RecentActivityCard } from "../../components/overview/recentActivity/RecentActivity";
+import { RetirementCard } from "../../components/Overview/RetirementCard/RetirementCard";
+import { InsightsCard } from "../../components/Overview/Insights/Insights";
+import { QuickActionsCard } from "../../components/Overview/QuickActions/QuickActions";
+import { RecentActivityCard } from "../../components/Overview/RecentActivity/RecentActivity";
 
 import { motion } from "framer-motion";
 import { fadeUp } from "../../animations/variants";
@@ -37,7 +37,6 @@ export const Overview = () => {
 
       {/* DASHBOARD GRID */}
       <div className="dashboard-grid">
-        
         {/* TOP ROW */}
 
         <motion.div

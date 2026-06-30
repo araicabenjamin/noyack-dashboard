@@ -1,6 +1,6 @@
 import { PieChart } from "lucide-react";
 import "./NetWorthCard.css";
-import { getNetWorth } from "../../../../data/financialCalculations";
+import { getNetWorth } from "../../../data/financialCalculations";
 
 const netWorth = getNetWorth();
 
@@ -14,7 +14,11 @@ export const NetWorthCard = () => {
         <h3 className="card-title">Net Worth</h3>
       </div>
       <div className="value-lg card-value">${netWorth.toLocaleString()}</div>
-      <div className="card-change positive">↑ 12% vs last year</div>
+
+       <p className="card-change">
+        <span className="card-change positive">↑ 12%</span>
+        <span className="card-change label"> vs last year</span>
+      </p>
     </div>
   );
 };

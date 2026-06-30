@@ -1,4 +1,4 @@
-import { ProfileDropdown } from "../../components/profileDropdown/ProfileDropdown";
+import { ProfileDropdown } from "../../components/ProfileDropdown/ProfileDropdown";
 import { Bell, Menu } from "lucide-react";
 import { useState } from "react";
 import "./TopBar.css";
