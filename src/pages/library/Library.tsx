@@ -108,49 +108,53 @@ const ebooks: Ebook[] = [
   },
 ];
 
-const categories = [
-  "All",
-  "Investing",
-  "Retirement",
-  "Debt",
-  "Financial Planning",
-  "Tax & Saving",
-];
-
 export function Library() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeTab, setActiveTab] = useState("ebooks");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredBooks = ebooks.filter((book) => {
-    const matchesCategory =
-      selectedCategory === "All" ||
-      book.category === selectedCategory;
-
-    const matchesSearch =
-      book.title.toLowerCase().includes(searchTerm.toLowerCase());
-
-    return matchesCategory && matchesSearch;
-  });
+  const filteredBooks = ebooks.filter((book) =>
+    book.title.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   return (
     <div className="library-page">
+
       {/* Header */}
-
       <div className="library-header">
-  <h1 className="page-semibold">
-    Digital Library
-  </h1>
+        <h1 className="page-semibold">Digital Library</h1>
 
-  <p className="helper-regular">
-    Explore our collection of ebooks and resources.
-    <br />
-    Read directly in your browser with our interactive
-    reader.
-  </p>
-</div>
+        <p className="helper-regular">
+          Explore our collection of ebooks and resources.
+          <br />
+          Read directly in your browser with our interactive reader.
+        </p>
+      </div>
+
+      {/* Tabs */}
+      <div className="library-tabs">
+        <button
+          className={activeTab === "ebooks" ? "active" : ""}
+          onClick={() => setActiveTab("ebooks")}
+        >
+          Ebooks
+        </button>
+
+        <button
+          className={activeTab === "reports" ? "active" : ""}
+          onClick={() => setActiveTab("reports")}
+        >
+          Reports
+        </button>
+
+        <button
+          className={activeTab === "glossary" ? "active" : ""}
+          onClick={() => setActiveTab("glossary")}
+        >
+          Glossary
+        </button>
+      </div>
 
       {/* Search */}
-
       <div className="library-search">
         <Search size={20} />
 
@@ -162,39 +166,10 @@ export function Library() {
         />
       </div>
 
-      {/* Filters */}
-
-      <div className="library-toolbar">
-        <div className="category-pills">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`pill ${
-                selectedCategory === category ? "active" : ""
-              }`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <select className="sort-select">
-          <option>Newest First</option>
-          <option>Oldest First</option>
-          <option>A-Z</option>
-          <option>Z-A</option>
-        </select>
-      </div>
-
       {/* Results */}
-
-      <p className="results-count">
-        {filteredBooks.length} ebooks available
-      </p>
+      <p className="results-count">{filteredBooks.length} ebooks available</p>
 
       {/* Grid */}
-
       <div className="ebooks-grid">
         {filteredBooks.map((book) => (
           <div className="ebook-card" key={book.id}>
@@ -202,15 +177,11 @@ export function Library() {
               <MoreVertical size={18} />
             </button>
 
-            <div className="ebook-icon">
-              {book.icon}
-            </div>
+            <div className="ebook-icon">{book.icon}</div>
 
             <h3>{book.title}</h3>
 
-            <span className={`tag ${book.tagColor}`}>
-              {book.category}
-            </span>
+            <span className={`tag ${book.tagColor}`}>{book.category}</span>
 
             <div className="read-time">
               <span>◷</span>
@@ -234,13 +205,9 @@ export function Library() {
           <ChevronLeft size={18} />
         </button>
 
-        <button className="page-number active">
-          1
-        </button>
+        <button className="page-number active">1</button>
 
-        <button className="page-number">
-          2
-        </button>
+        <button className="page-number">2</button>
 
         <button className="page-arrow">
           <ChevronRight size={18} />

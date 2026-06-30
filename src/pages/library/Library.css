@@ -12,6 +12,45 @@
   line-height: 1.7;
 }
 
+
+
+/* =========================
+   LIBRARY TABS
+========================= */
+
+.library-tabs {
+  display: flex;
+  gap: 48px;
+
+  margin: 32px 0;
+}
+
+.library-tabs button {
+  background: none;
+  border: none;
+
+  padding: 0 0 12px;
+
+  cursor: pointer;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+
+  transition: color .2s ease;
+}
+
+.library-tabs button:hover {
+  color: var(--color-text-primary);
+}
+
+.library-tabs button.active {
+  color: var(--brand-blue);
+  border-bottom: 3px solid var(--brand-blue);
+}
+
+
 /* =========================
    SEARCH
 ========================= */
@@ -54,68 +93,6 @@
 
 .library-search input::placeholder {
   color: #94a3b8;
-}
-
-/* =========================
-   TOOLBAR
-========================= */
-
-.library-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 24px;
-  gap: 20px;
-}
-
-.category-pills {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  border: 1px solid #e2e8f0;
-  background: white;
-
-  height: 44px;
-  padding: 0 18px;
-
-  border-radius: 12px;
-
-  cursor: pointer;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  transition: all 0.2s ease;
-}
-
-.pill:hover {
-  border-color: #2563eb;
-}
-
-.pill.active {
-  background: #eff6ff;
-  border-color: #2563eb;
-  color: #2563eb;
-}
-
-.sort-select {
-  min-width: 180px;
-
-  height: 44px;
-  padding: 0 16px;
-
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-
-  background: white;
-
-  font-size: 14px;
-  color: #334155;
-  cursor: pointer;
 }
 
 /* =========================
