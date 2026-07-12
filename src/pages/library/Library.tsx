@@ -16,6 +16,14 @@ import {
   MoreVertical,
 } from "lucide-react";
 
+// Function to download a file
+function downloadFile(url: string, filename: string) { 
+  const link = document.createElement("a"); 
+  link.href = url; 
+  link.download = filename; 
+  link.click(); 
+}
+
 interface Ebook {
   id: number;
   title: string;
@@ -23,6 +31,8 @@ interface Ebook {
   readTime: string;
   icon: React.ReactNode;
   tagColor: string;
+  fileUrl?: string;
+
 }
 
 const ebooks: Ebook[] = [
@@ -33,6 +43,7 @@ const ebooks: Ebook[] = [
     readTime: "18 min read",
     icon: <TrendingUp size={30} />,
     tagColor: "investing",
+    fileUrl: "/ebooks/50 Years of Warren Buffett Lessons_Ebook.pdf",
   },
   {
     id: 2,
@@ -41,6 +52,7 @@ const ebooks: Ebook[] = [
     readTime: "24 min read",
     icon: <Landmark size={30} />,
     tagColor: "investing",
+    fileUrl: "/ebooks/Alts for All The Definitive Guide to Alternatives_Ebook.pdf",
   },
   {
     id: 3,
@@ -49,6 +61,7 @@ const ebooks: Ebook[] = [
     readTime: "22 min read",
     icon: <Target size={30} />,
     tagColor: "investing",
+    fileUrl: "/ebooks/Generating Impact Using Alternative Investments_Ebook.pdf",
   },
   {
     id: 4,
@@ -57,6 +70,7 @@ const ebooks: Ebook[] = [
     readTime: "15 min read",
     icon: <Users size={30} />,
     tagColor: "planning",
+    fileUrl: "/ebooks/Family Financial Planning Guide (Oct 2023)_Ebook.pdf",
   },
   {
     id: 5,
@@ -65,6 +79,7 @@ const ebooks: Ebook[] = [
     readTime: "20 min read",
     icon: <Umbrella size={30} />,
     tagColor: "retirement",
+    fileUrl: "/ebooks/The Ultimate Retirement Planning Guide_Ebook.pdf",
   },
   {
     id: 6,
@@ -73,6 +88,7 @@ const ebooks: Ebook[] = [
     readTime: "16 min read",
     icon: <BadgeDollarSign size={30} />,
     tagColor: "debt",
+    fileUrl: "/ebooks/Debt Reduction Guide for Millennials_Ebook.pdf",
   },
   {
     id: 7,
@@ -81,6 +97,7 @@ const ebooks: Ebook[] = [
     readTime: "19 min read",
     icon: <ShieldCheck size={30} />,
     tagColor: "investing",
+    fileUrl: "/ebooks/A Guide to Building Wealth Through Stocks_Ebook.pdf",
   },
   {
     id: 8,
@@ -89,6 +106,7 @@ const ebooks: Ebook[] = [
     readTime: "12 min read",
     icon: <PieChart size={30} />,
     tagColor: "planning",
+    fileUrl: "/ebooks/Smart Saving Strategies for Busy People_Ebook.pdf",
   },
   {
     id: 9,
@@ -97,6 +115,7 @@ const ebooks: Ebook[] = [
     readTime: "14 min read",
     icon: <Landmark size={30} />,
     tagColor: "investing",
+    fileUrl: "/ebooks/Understanding Bonds and Fixed Income Investing_Ebook.pdf",
   },
   {
     id: 10,
@@ -105,6 +124,7 @@ const ebooks: Ebook[] = [
     readTime: "17 min read",
     icon: <PieChart size={30} />,
     tagColor: "investing",
+    fileUrl: "/ebooks/Asset Allocation Made Simple_Ebook.pdf",
   },
 ];
 
@@ -189,17 +209,17 @@ export function Library() {
             </div>
 
             <div className="card-footer">
-              <button className="read-btn">
-                Read Now
+              <button className="read-btn"
+              onClick={() => book.fileUrl && downloadFile(book.fileUrl, `${book.title}.pdf`)}> 
+                Download Now
                 <ChevronRight size={16} />
               </button>
-            </div>
+            </div>  
           </div>
         ))}
       </div>
 
       {/* Pagination */}
-
       <div className="pagination">
         <button className="page-arrow">
           <ChevronLeft size={18} />
