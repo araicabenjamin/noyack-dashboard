@@ -7,6 +7,7 @@ import { Library } from "./pages/library/Library";
 import { Events } from "./pages/events/Events";
 import { Tools } from "./pages/tools/Tools";
 import { WealthProfile } from "./pages/wealthprofile/WealthProfile";
+import { Academy } from "./pages/academy/Academy";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/wealth-profile" element={<WealthProfile />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/academy" element={<Academy />} />
       </Routes>
     </AppLayout>
   );
