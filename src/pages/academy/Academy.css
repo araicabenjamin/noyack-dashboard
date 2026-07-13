@@ -1,22 +1,6 @@
-/* =========================
-   PAGE
-========================= */
-
-.academy-page {
-  padding: var(--space-32);
-}
-
-/* =========================
-   HEADER
-========================= */
 
 .academy-header {
-  margin-bottom: var(--space-28);
-}
-
-.academy-header p {
-  color: var(--color-text-muted);
-  margin-top: var(--space-8);
+  margin-bottom: var(--space-32);
 }
 
 /* =========================
@@ -141,9 +125,9 @@
 
 .category-filters button.active {
   background: var(--color-surface-primary);
-  border: 2px solid var(--brand-blue);
+  border: 1px solid var(--brand-blue);
   color: var(--brand-blue);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* =========================

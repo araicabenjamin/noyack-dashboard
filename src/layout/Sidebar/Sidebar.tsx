@@ -60,10 +60,17 @@ export const Sidebar = () => {
           <span>Library</span>
         </NavLink>
 
-        <div className="sidebar-item">
+
+        <NavLink
+          to="/academy"
+          className={({ isActive }) =>
+            `sidebar-item ${isActive ? "active" : ""}`
+          }
+        >
           <GraduationCap />
           <span>Academy</span>
-        </div>
+        </NavLink>
+        
 
         <NavLink
           to="/wealth-profile"

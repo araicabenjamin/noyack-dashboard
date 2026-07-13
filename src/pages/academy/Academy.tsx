@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Academy.css";
 
-import { Search, Play } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface Video {
   id: number;
@@ -80,11 +80,6 @@ const categories = [
 
 export function Academy() {
   const [activeCategory, setActiveCategory] = useState("All Topics");
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredVideos = videos.filter((video) =>
-    video.title.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
 
   // Continue-watching progress: 8 of 14 min
   const progressPercent = (8 / 14) * 100;
@@ -133,20 +128,9 @@ export function Academy() {
         ))}
       </div>
 
-      {/* Search (kept for usability, not in the screenshot but useful once the library grows) */}
-      <div className="academy-search">
-        <Search size={20} />
-        <input
-          type="text"
-          placeholder="Search classes or advisors..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
-
       {/* Grid */}
       <div className="videos-grid">
-        {filteredVideos.map((video) => (
+        {videos.map((video) => (
           <div className="video-card" key={video.id}>
             <div className={`video-thumbnail ${video.tagColor}`}>
               <div className="play-overlay">
