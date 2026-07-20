@@ -1,0 +1,140 @@
+/* PAGE HEADINGS */
+
+.page-bold {
+  font-size: var(--font-size-2xl);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.page-semibold {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+/* CARD HEADINGS */
+
+.card-bold {
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.card-semibold {
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* PRIMARY TEXT */
+
+.primary-regular,
+.body-regular {
+  font-size: var(--font-size-md);
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.primary-medium,
+.body-medium {
+  font-size: var(--font-size-md);
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.primary-semibold,
+.body-semibold {
+  font-size: var(--font-size-md);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* HELPERS */
+
+.helper-regular {
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.helper-medium {
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.helper-semibold {
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* META */
+
+.meta-regular {
+  font-size: var(--font-size-sm);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* BUTTONS */
+
+.button-medium {
+  font-size: var(--font-size-sm);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* BADGES */
+
+.badge-medium {
+  font-size: var(--font-size-sm);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* VALUES */
+
+.value-xl {
+  font-size: var(--font-size-3xl);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.value-lg {
+  font-size: var(--font-size-2xl);
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 5px;
+  color: var(--color-text-primary);
+}
+
+.value-md {
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+/* EMPHASIS */
+
+.emphasis-semibold {
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.emphasis-bold {
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+  font-weight: 700;
+}
+

@@ -1,0 +1,177 @@
+.supportPage {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.supportHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.supportLayout {
+  display: grid;
+  grid-template-columns: 2fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.supportTabs {
+  display: flex;
+  align-items: center;
+
+  background: var(--color-surface-primary);
+
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+}
+
+.supportTab {
+  flex: 1;
+
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--color-text-secondary);
+
+  cursor: pointer;
+
+  border-bottom: 3px solid transparent;
+
+  transition: var(--transition-hover);
+}
+
+.supportTab.active {
+  color: var(--color-primary);
+
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.faqSection {
+  background: var(--color-surface-primary);
+
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+}
+
+.faqItem:not(:last-child) {
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.faqTrigger {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.faqTrigger span {
+  font-size: var(--font-size-body);
+  font-weight: 500;
+}
+
+.faqContent {
+  padding: 0 24px 24px;
+}
+
+.faqContent p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.faqChevron {
+  transition: transform 0.2s ease;
+}
+
+.faqChevron.open {
+  transform: rotate(180deg);
+}
+
+.supportSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.supportCard {
+  background: var(--color-surface-primary);
+
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.supportCardIcon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: var(--brand-blue-10);
+
+  color: var(--color-primary);
+}
+
+.supportCardIconSuccess {
+  background: var(--brand-teal-10);
+
+  color: var(--brand-teal);
+}
+
+.secondaryButton,
+.primaryButton {
+  min-height: 48px;
+
+  border-radius: 12px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-primary);
+
+  background: transparent;
+
+  color: var(--color-primary);
+}
+
+.primaryButton {
+  border: none;
+
+  background: var(--color-primary);
+
+  color: white;
+}

@@ -1,0 +1,155 @@
+.retirement-chart { 
+  position: relative;
+}
+
+.chart-endpoint-badge {
+  position: absolute;
+  top: -22px;
+  right: -10px;
+
+  background: #01abad;
+  color: white;
+
+  padding: 8px 8px;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  box-shadow: 0 10px 30px rgba(1, 171, 173, 0.18);
+}
+
+
+/* Triangle underneath */
+.chart-endpoint-badge::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #01abad;
+}
+
+
+/* STATS CONTAINER */
+.retirement-stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+
+  padding: 24px 10px;
+
+  background: #f7fafa;
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.stat {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat:not(:last-child) {
+  border-right: 1px solid #D9D9D9;
+}
+
+.stat p {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.stat h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #01ABAD;
+}
+
+
+
+/* RETIREMENT CARD*/
+.retirement-card {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.retirement-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.retirement-header h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.retirement-header p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+
+/* SUMMARY */
+.retirement-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.retirement-summary h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  color: #01ABAD;
+}
+
+.badge {
+  background: #e6f7f7;
+  color: #0ea5a5;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* CHART PLACEHOLDER */
+.chart-placeholder {
+  height: 140px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background: linear-gradient(to top, #d1f2f2, transparent);
+}
+
+
+/* =========================
+   RETIREMENT CARD TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .retirement-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stat {
+    border-right: none !important;
+  }
+}

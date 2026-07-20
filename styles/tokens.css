@@ -1,0 +1,200 @@
+:root {
+  /* =========================
+     TEXT
+  ========================= */
+
+  --color-text-primary: #111827;
+
+  --color-text-secondary: #6b7280;
+
+  --color-text-muted: #64748b;
+
+  --color-text-inverse: #ffffff;
+
+  /* =========================
+   TYPOGRAPHY TOKENS
+========================= */
+
+  --font-size-sm: 14px;
+
+  --font-size-md: 16px;
+
+  --font-size-lg: 18px;
+
+  --font-size-xl: 20px;
+
+  --font-size-2xl: 28px;
+
+  --font-size-3xl: 36px;
+
+  /* =========================
+     BACKGROUNDS / SURFACES
+  ========================= */
+
+  --color-bg: #f8fafc;
+
+  --color-surface-primary: #ffffff;
+
+  --color-surface-secondary: #f9fafb;
+
+  --color-surface-blue: #f2f7fb;
+
+  --color-surface-teal: rgba(1, 171, 173, 0.15);
+
+  --color-tab-active: #f2f5fd;
+
+  /* =========================
+     BORDER
+  ========================= */
+
+  --color-border-primary: #e5e7eb;
+
+  --color-border-secondary: #f0f4fd;
+
+  --color-border-interactive: #0067a7;
+
+  /* =========================
+   BRAND
+========================= */
+
+  /* Brand */
+
+  --brand-blue: #0067a7;
+  --brand-teal: #01abad;
+
+  /* Tints */
+
+  --brand-blue-10: rgba(0, 103, 167, 0.1);
+  --brand-blue-15: rgba(0, 103, 167, 0.15);
+
+  --brand-teal-10: rgba(1, 171, 173, 0.1);
+  --brand-teal-15: rgba(1, 171, 173, 0.15);
+
+  /* compatibility aliases */
+
+  --color-primary: var(--brand-blue);
+  --color-secondary: var(--brand-navy);
+  --color-teal: var(--brand-teal);
+
+  /* =========================
+   ACCENTS
+========================= */
+
+  /* Purple */
+  --accent-purple: #b26ec5;
+  --accent-purple-bg: #f2ebff;
+
+  /* Blue */
+  --accent-blue: var(--brand-blue);
+  --accent-blue-bg: #0067a7;
+
+  /* Orange */
+  --accent-orange: #d97706;
+  --accent-orange-bg: #fef3c7;
+
+  /* Pink */
+  --accent-pink: #be185d;
+  --accent-pink-bg: #fce7f3;
+
+  /* Teal */
+  --accent-teal: #01abad;
+  --accent-teal-bg: #ccfbf1;
+
+  /* =========================
+     GRADIENT
+  ========================= */
+
+  --gradient-brand: linear-gradient(
+    90deg,
+    var(--brand-blue) 0%,
+    var(--brand-teal) 100%
+  );
+
+  /* =========================
+   INTERACTION STATES
+========================= */
+
+  --color-hover-primary: var(--color-surface-blue);
+
+  --color-hover-border: var(--brand-blue);
+
+  --transition-hover:
+    background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  /* =========================
+     ACCENTS
+  ========================= */
+
+  --color-purple: #7c3aed;
+
+  --color-orange: #f59e0b;
+
+  /* =========================
+     STATUS
+  ========================= */
+
+  --color-success: var(--brand-teal);
+
+  --color-warning: #d97706;
+
+  --color-danger: #dc2626;
+
+  /* =========================
+     RADIUS
+  ========================= */
+
+  --radius-sm: 8px;
+
+  --radius-md: 12px;
+
+  --radius-lg: 16px;
+
+  --radius-xl: 20px;
+
+  /* =========================
+     SPACING
+  ========================= */
+
+  --space-2: 2px;
+
+  --space-4: 4px;
+
+  --space-6: 6px;
+
+  --space-8: 8px;
+
+  --space-10: 10px;
+
+  --space-12: 12px;
+
+  --space-14: 14px;
+
+  --space-16: 16px;
+
+  --space-18: 18px;
+
+  --space-20: 20px;
+
+  --space-24: 24px;
+
+  --space-28: 28px;
+
+  --space-32: 32px;
+
+  --space-36: 36px;
+
+  --space-40: 40px;
+}
+
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-value-lg: 42px;
+    --font-size-value-md: 24px;
+
+    --font-size-card-heading: 20px;
+    --font-size-card-title: 18px;
+
+    --font-size-helper: 16px;
+  }
+}
