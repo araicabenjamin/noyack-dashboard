@@ -1,15 +1,18 @@
-import { ProfileDropdown } from "../../components/ProfileDropdown/ProfileDropdown";
+import { ProfileDropdown } from "../../components/profile dropdown/ProfileDropdown";
 import { Bell, Menu } from "lucide-react";
 import { useState } from "react";
 import "./TopBar.css";
 
-export const TopBar = () => {
+type TopBarProps = {
+  onOpenCopilot: () => void;
+};
+
+export const TopBar = ({ onOpenCopilot }: TopBarProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   return (
     <div className="topbar">
-
       {/* Mobile Menu Button */}
       <button
         className="mobile-menu-button"
@@ -19,7 +22,7 @@ export const TopBar = () => {
       </button>
 
       {/* Search Bar */}
-      <div className="search-bar">
+      <div className="search-bar" onClick={onOpenCopilot}>
         <img src="/NOYACK_Favicon.png" alt="Noyack" className="search-logo" />
 
         <input
@@ -48,7 +51,6 @@ export const TopBar = () => {
           </button>
 
           {isDropdownOpen && <ProfileDropdown />}
-          
         </div>
       </div>
     </div>

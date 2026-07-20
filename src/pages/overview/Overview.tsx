@@ -1,14 +1,14 @@
 import "./Overview.css";
 
-import { NetWorthCard } from "../../components/Overview/NetWorthCard/NetWorthCard";
-import { DebtCard } from "../../components/Overview/DebtCard/DebtCard";
-import { EmergencyFundCard } from "../../components/Overview/EmergencyFundCard/EmergencyFundCard";
-import { CashAvailableCard } from "../../components/Overview/CashAvailableCard/CashAvailableCard";
+import { NetWorthCard } from "../../components/overview/NetWorthCard/NetWorthCard";
+import { DebtCard } from "../../components/overview/DebtCard/DebtCard";
+import { EmergencyFundCard } from "../../components/overview/EmergencyFundCard/EmergencyFundCard";
+import { CashAvailableCard } from "../../components/overview/CashAvailableCard/CashAvailableCard";
 
-import { RetirementCard } from "../../components/Overview/RetirementCard/RetirementCard";
-import { InsightsCard } from "../../components/Overview/Insights/Insights";
-import { QuickActionsCard } from "../../components/Overview/QuickActions/QuickActions";
-import { RecentActivityCard } from "../../components/Overview/RecentActivity/RecentActivity";
+import { RetirementCard } from "../../components/overview/RetirementCard/RetirementCard";
+import { InsightsCard } from "../../components/overview/Insights/Insights";
+import { QuickActionsCard } from "../../components/overview/QuickActions/QuickActions";
+import { RecentActivityCard } from "../../components/overview/RecentActivity/RecentActivity";
 
 import { motion } from "framer-motion";
 import { fadeUp } from "../../animations/variants";

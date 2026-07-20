@@ -1,4 +1,4 @@
-import type { FinancialData } from "../types/finance";
+import type { FinancialData } from "../types/Finance";
 
 export function calculateRentingCost(
   inputs: FinancialData

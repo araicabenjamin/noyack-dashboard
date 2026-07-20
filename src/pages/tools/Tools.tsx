@@ -5,7 +5,7 @@ import {
   calculateBuyingCost,
   calculateRentingCost,
 } from "../../util/financial";
-import type { FinancialData } from "../../types/finance";
+import type { FinancialData } from "../../types/Finance";
 
 import {
   Home,
