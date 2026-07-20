@@ -58,8 +58,8 @@
 /* HELPERS */
 
 .helper-regular {
-  font-size: var(--font-size-md);
-  line-height: 1.7;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
   font-weight: 400;
   color: var(--color-text-muted);
 }
