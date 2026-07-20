@@ -2,18 +2,19 @@ import { ArrowUp } from "lucide-react";
 import { useState } from "react";
 
 // RECEIVES A FUNCTION TO ADD A MESSAGE TO THE CHAT MODAL AND A FUNCTION TO CLEAR THE INPUT FIELD
+type ChatInputProps = {
+  onSendMessage: (message: string) => void;
+};
 
-const ChatInput = () => {
+const ChatInput = ({ onSendMessage }: ChatInputProps) => {
   const [message, setMessage] = useState("");
   const handleSendMessage = () => {
-    // Handle sending the message here
-    console.log("Sending message:", message);
-    setMessage(""); // Clear the input after sending
-  }
+    onSendMessage(message);
+    setMessage("");
+  };
 
   return (
     <div className="chatInput">
-      
       <div className="chatInputContainer">
         <input
           type="text"
