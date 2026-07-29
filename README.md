@@ -14,7 +14,8 @@ NOYACK helps users understand and improve their financial health through interac
 
 ## Screenshots
 
-> Add 2–3 screenshots or GIFs showcasing the dashboard and Copilot interface.
+> <img width="2160" height="1500" alt="Overview" src="https://github.com/user-attachments/assets/ddbf36c2-d4a8-4712-9e8a-09fd6c33e0d9" />
+
 
 ---
 
