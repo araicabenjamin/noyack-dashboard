@@ -15,12 +15,11 @@ NOYACK helps users understand and improve their financial health through interac
 
 ## Screenshots
 
-> <img alt="NOYACK Dashboard Overview" src="https://github.com/user-attachments/assets/ddbf36c2-d4a8-4712-9e8a-09fd6c33e0d9" />
+> <img width="2160" height="1500" alt="Overview" src="https://github.com/user-attachments/assets/75634a73-6076-4f88-864f-16498c2a3eeb" />
 
-<img alt="NOYACK Library" src="https://github.com/user-attachments/assets/3664b707-cc46-4bc9-aaeb-738e66fb6486"/>
+<img width="2160" height="1500" alt="Library" src="https://github.com/user-attachments/assets/aa0a4fcf-0544-4fed-978c-ab336c9c276a" />
 
-<img alt="NOYACK Tools" src="https://github.com/user-attachments/assets/12ef97df-24b0-4853-ab09-b6cdf9a15d3c" />
-
+<img width="2160" height="1500" alt="Tools" src="https://github.com/user-attachments/assets/72239b81-d5d4-45b8-8103-ba7bed863b16" />
 
 
 ---
