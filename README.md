@@ -17,7 +17,7 @@ NOYACK helps users understand and improve their financial health through interac
 
 <img width="2160" height="1500" alt="Overview" src="https://github.com/user-attachments/assets/75634a73-6076-4f88-864f-16498c2a3eeb" />
 
-<br><br>
+&nbsp;
 
 <img width="2160" height="1500" alt="Library" src="https://github.com/user-attachments/assets/aa0a4fcf-0544-4fed-978c-ab336c9c276a" />
 
