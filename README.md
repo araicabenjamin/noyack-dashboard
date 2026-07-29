@@ -169,7 +169,7 @@ npm run build
 
 **Benjamin Araica**
 
-UX Engineer • Product Designer • Front-End Developer
+Front-End Developer • Product Designer 
 
 Portfolio  
 https://benjaminux.com
