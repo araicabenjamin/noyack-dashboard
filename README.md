@@ -9,7 +9,7 @@ NOYACK helps users understand and improve their financial health through interac
 
 ## Live Demo
 
-🔗 noyack-dashboard.vercel.app
+🔗 https://noyack-dashboard.vercel.app
 
 ---
 
