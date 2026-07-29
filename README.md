@@ -1,3 +1,4 @@
+
 # NOYACK Dashboard
 
 An AI-powered personal wealth management dashboard built with **Next.js**, **React**, and **TypeScript**.
@@ -15,6 +16,11 @@ NOYACK helps users understand and improve their financial health through interac
 ## Screenshots
 
 > <img width="2160" height="1500" alt="Overview" src="https://github.com/user-attachments/assets/ddbf36c2-d4a8-4712-9e8a-09fd6c33e0d9" />
+
+<img width="2160" height="1500" alt="Library" src="https://github.com/user-attachments/assets/3664b707-cc46-4bc9-aaeb-738e66fb6486" />
+
+<img width="2160" height="1500" alt="Tools" src="https://github.com/user-attachments/assets/12ef97df-24b0-4853-ab09-b6cdf9a15d3c" />
+
 
 
 ---
