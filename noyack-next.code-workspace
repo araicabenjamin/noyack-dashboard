@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../noyack-next"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

@@ -1,5 +1,6 @@
 "use client";
 import "./globals.css";
+import CustomCursor from "../components/custom cursor/CustomCursor";
 
 import { Sidebar } from "../components/layout/Sidebar/Sidebar";
 import { TopBar } from "../components/layout/TopBar/TopBar";
@@ -13,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [isCopilotOpen, setIsCopilotOpen] = useState(false);
+  
 
   return (
     <html lang="en">
       <body>
+          <CustomCursor />
         <div className="app-layout">
           {isCopilotOpen && (
             <CopilotModal onClose={() => setIsCopilotOpen(false)} />
