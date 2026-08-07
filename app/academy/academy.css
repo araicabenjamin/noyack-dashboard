@@ -67,7 +67,7 @@
 }
 
 .academy-search svg {
-  color: var(--color-text-secondary);
+  color: #94a3b8; /* text-slate-400 */
   flex-shrink: 0;
 }
 
@@ -76,12 +76,12 @@
   outline: none;
   background: transparent;
 
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
+  font-size: 15px;
+  color: #94a3b8; /* text-slate-400 */
 }
 
 .academy-search input::placeholder {
-  color: var(--color-text-secondary);
+  color: #94a3b8; /* text-slate-400 */
 }
 
 /* =========================
@@ -174,14 +174,10 @@
 }
 
 .video-thumbnail.estate {
-  background: linear-gradient(
-    135deg,
-    var(--brand-blue) 0%,
-    var(--brand-teal) 100%
-  );
+  background: var(--brand-blue-10);
 }
 .video-thumbnail.estate .play-overlay {
-  color: var(--brand-blue);
+   color: var(--brand-blue);
 }
 
 .video-thumbnail.planning {
@@ -191,12 +187,13 @@
   color: var(--accent-purple);
 }
 
+/* .TAGS */
 .tag.investing {
   background: var(--brand-blue-10);
   color: var(--brand-blue);
 }
 .tag.retirement {
-  background: var(--accent-teal-bg);
+  background: #E6F7F7;
   color: var(--accent-teal);
 }
 .tag.estate {

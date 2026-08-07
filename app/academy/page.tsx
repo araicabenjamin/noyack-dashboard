@@ -36,8 +36,8 @@ const videos: Video[] = [
   {
     id: 3,
     title: "Trusts explained: do you actually need one",
-    tag: "Estate planning",
-    tagColor: "estate",
+    tag: "Investing",
+    tagColor: "investing",
     duration: "15 min",
     instructor: "Marcus Lee, RA",
     avatarUrl: "https://i.pravatar.cc/40?img=33",
