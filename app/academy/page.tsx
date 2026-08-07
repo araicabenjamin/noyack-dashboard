@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./academy.css";
 
-import { Play } from "lucide-react";
+import { Play, Search } from "lucide-react";
 
 interface Video {
   id: number;
@@ -81,6 +81,11 @@ const categories = [
 
 export default function Academy() {
   const [activeCategory, setActiveCategory] = useState("All Topics");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredVideos = videos.filter((video) =>
+    video.title.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
 
   // Continue-watching progress: 8 of 14 min
   const progressPercent = (8 / 14) * 100;
@@ -91,29 +96,20 @@ export default function Academy() {
       <div className="academy-header">
         <h1 className="page-semibold">Academy</h1>
         <p className="helper-regular">
-          Learn from our registered advisors. Short video classes on the
-          topics that matter to your wealth.
+          Short video classes on the topics that matter to your wealth.
         </p>
       </div>
 
-      {/* Continue watching */}
-      <div className="continue-watching">
-        <div className="continue-watching-info">
-          <span className="badge">Continue watching</span>
-          <h2>Tax optimization strategies for high earners</h2>
-          <p>with Sarah Chen, RA &nbsp;·&nbsp; 8 of 14 min left</p>
+      {/* Search */}
+      <div className="academy-search">
+        <Search size={20} />
 
-          <div className="progress-track">
-            <div
-              className="progress-fill"
-              style={{ width: `${progressPercent}%` }}
-            />
-          </div>
-        </div>
-
-        <button className="play-btn" aria-label="Resume video">
-          <Play size={22} fill="currentColor" />
-        </button>
+        <input
+          type="text"
+          placeholder="Search videos or topics"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
       </div>
 
       {/* Category filters */}
