@@ -21,7 +21,7 @@ const CopilotModal = ({ onClose }: CopilotModalProps) => {
     },
   ]);
 
-  const handleSendMessage = (message: string) => {
+  const handleSendMessage = async (message: string) => {
     setMessages((previousMessages) => [
       ...previousMessages,
       {
@@ -29,6 +29,40 @@ const CopilotModal = ({ onClose }: CopilotModalProps) => {
         content: message,
       },
     ]);
+
+    try {
+      const response = await fetch("/api/copilot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to get Copilot response");
+      }
+
+      const data = await response.json();
+
+      setMessages((previousMessages) => [
+        ...previousMessages,
+        {
+          role: "assistant",
+          content: data.reply,
+        },
+      ]);
+    } catch (error) {
+      console.error(error);
+
+      setMessages((previousMessages) => [
+        ...previousMessages,
+        {
+          role: "assistant",
+          content: "Sorry, I wasn't able to process that request.",
+        },
+      ]);
+    }
   };
 
   return (

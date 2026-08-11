@@ -8,66 +8,73 @@ interface Video {
   id: number;
   title: string;
   tag: string;
-  tagColor: "investing" | "retirement" | "estate" | "planning";
+  tagColor: "investing" | "mortgages" | "planning";
   duration: string;
   instructor: string;
   avatarUrl: string;
+  thumbnail: string;
 }
 
 const videos: Video[] = [
   {
     id: 1,
-    title: "How refinancing works in a high-rate market",
+    title: "Roth vs traditional: which wins long-term",
     tag: "Investing",
     tagColor: "investing",
     duration: "12 min",
-    instructor: "David Kim, RA",
-    avatarUrl: "https://i.pravatar.cc/40?img=12",
+    instructor: "Emily Chen, RA",
+    avatarUrl: "/Avatar 1.png",
+    thumbnail: "/Thumbnail 1.png",
   },
   {
     id: 2,
     title: "Roth vs traditional: which wins long-term",
-    tag: "Retirement",
-    tagColor: "retirement",
+    tag: "Mortgages",
+    tagColor: "mortgages",
     duration: "9 min",
-    instructor: "Sarah Chen, RA",
-    avatarUrl: "https://i.pravatar.cc/40?img=45",
+    instructor: "Maya Wiliams, CFP®",
+    avatarUrl: "/Avatar 2.png",
+    thumbnail: "/Thumbnail 2.png",
   },
   {
     id: 3,
     title: "Trusts explained: do you actually need one",
-    tag: "Investing",
-    tagColor: "investing",
+    tag: "Financial Planning",
+    tagColor: "planning",
     duration: "15 min",
-    instructor: "Marcus Lee, RA",
-    avatarUrl: "https://i.pravatar.cc/40?img=33",
+    instructor: "David Myers, RA",
+    avatarUrl: "/Avatar 3.png",
+    thumbnail: "/Thumbnail 3.png",
   },
   {
     id: 4,
-    title: "Building a simple monthly budget that sticks",
-    tag: "Financial Planning",
-    tagColor: "planning",
-    duration: "6 min",
-    instructor: "Sarah Chen, RA",
-    avatarUrl: "https://i.pravatar.cc/40?img=45",
+    title: "Private equity for individual investors",
+    tag: "Investing",
+    tagColor: "investing",
+    duration: "5 min",
+    instructor: "Michael Carter, CFA®",
+    avatarUrl: "/Avatar 4.png",
+    thumbnail: "/Thumbnail 4.png",
   },
   {
     id: 5,
-    title: "Understanding bonds and fixed income basics",
+    title: "What is dollar-cost averaging into an ETF",
     tag: "Investing",
     tagColor: "investing",
-    duration: "2 min",
-    instructor: "David Kim, RA",
-    avatarUrl: "https://i.pravatar.cc/40?img=12",
+    duration: "11 min",
+    instructor: "Sarah Williams, CFP®",
+    avatarUrl: "/Avatar 5.png",
+    thumbnail: "/Thumbnail 5.png",
   },
   {
     id: 6,
-    title: "Catch-up contributions after age 50",
-    tag: "Retirement",
-    tagColor: "retirement",
-    duration: "11 min",
-    instructor: "Marcus Lee, RA",
-    avatarUrl: "https://i.pravatar.cc/40?img=33",
+    title: "Municipal bonds and tax-free income",
+    tag: "Investing",
+    tagColor: "investing",
+    duration: "9 min",
+    instructor: "Rachel Thompson, CFP®",
+    avatarUrl: "/Avatar 5.png",
+    thumbnail: "/Thumbnail 6.png",
   },
 ];
 
@@ -130,9 +137,16 @@ export default function Academy() {
         {videos.map((video) => (
           <div className="video-card" key={video.id}>
             <div className={`video-thumbnail ${video.tagColor}`}>
+              <img
+                src={video.thumbnail}
+                alt={video.title}
+                className="video-thumbnail-image"
+              />
+
               <div className="play-overlay">
                 <Play size={20} fill="currentColor" />
               </div>
+
               <span className="duration-badge">{video.duration}</span>
             </div>
 
