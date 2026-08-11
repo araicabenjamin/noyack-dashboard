@@ -1,4 +1,4 @@
-import { DollarSign } from "lucide-react";
+import { BanknoteArrowUp } from "lucide-react";
 import { getEmergencyFund } from "../../../data/financialCalculations";
 
 export const EmergencyFundCard = () => {
@@ -6,7 +6,7 @@ export const EmergencyFundCard = () => {
     <div className="card">
       <div className="card-header">
         <div className="icon-wrapper">
-          <DollarSign className="card-icon" size={20} color="#0067A7" />
+          <BanknoteArrowUp className="card-icon" size={20} color="#0067A7" />
         </div>
 
         <h3 className="card-title">Emergency Fund</h3>

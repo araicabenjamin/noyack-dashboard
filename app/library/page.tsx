@@ -146,8 +146,6 @@ export default function Library() {
 
         <p className="helper-regular">
           Explore our collection of ebooks and resources.
-          <br />
-          Read directly in your browser with our interactive reader.
         </p>
       </div>
 
